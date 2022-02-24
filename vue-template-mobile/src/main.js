@@ -9,8 +9,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Loading from '@/plugins/loading' // 初始化加载loading
-import PageLoading from '@/plugins/pageLoading' // 页面加载loading
+
+import FullLoading from '@/plugins/FullLoading' // 全屏loading
+import Loading from '@/plugins/Loading' // 页面加载loading
 // import VueAMap from 'vue-amap'
 import BaiduMap from 'vue-baidu-map'
 
@@ -31,8 +32,8 @@ import http from '@/mock'
 // mock引入
 // require('@/mock')
 
+Vue.use(FullLoading)
 Vue.use(Loading)
-Vue.use(PageLoading)
 
 // Vue.use(VueAMap)
 

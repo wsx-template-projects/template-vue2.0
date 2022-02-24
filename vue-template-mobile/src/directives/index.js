@@ -4,6 +4,22 @@
 import Vue from 'vue'
 
 /**
+ * 权限指令
+ */
+Vue.directive('permission', {})
+
+/**
+ * 吸顶指令
+ */
+Vue.directive('sticky', {})
+
+/**
+ * 剪切板指令
+ * v-clipboard
+ */
+Vue.directive('clipboard', {})
+
+/**
  * 后台管理按钮权限指令
  * v-has="按钮标识"
  */

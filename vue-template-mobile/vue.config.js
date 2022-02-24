@@ -4,10 +4,10 @@
 const Path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
 
-console.log('-----proxyCode:', process.env.VUE_APP_PROXY_CODE)
-console.log('-----nodeEnv:', process.env.NODE_ENV)
-console.log('-----serverENV:', process.env.VUE_APP_SERVER_ENV)
-console.log('-----serverURL:', process.env.VUE_APP_SERVER_URL)
+console.log('VUE_APP_PROXY_CODE:', process.env.VUE_APP_PROXY_CODE)
+console.log('NODE_ENV:', process.env.NODE_ENV)
+console.log('VUE_APP_SERVER_ENV:', process.env.VUE_APP_SERVER_ENV)
+console.log('VUE_APP_SERVER_URL:', process.env.VUE_APP_SERVER_URL)
 
 const projectName = 'project_h5'
 
@@ -66,7 +66,7 @@ module.exports = {
     devServer: {
         host: '0.0.0.0',
         port: '8899',
-        open: false, // 项目启动后自动打开浏览器
+        open: true, // 项目启动后自动打开浏览器
         https: false,
         // progress: false
         proxy: {

@@ -1,25 +1,10 @@
-<!--  -->
+<!--
+ 界面加载loading
+-->
 <template>
-    <div class="loading">
-        <!-- 自定义加载动画 -->
-        <!-- <transition name="loading-transition">
-      <div class="loading-global" v-show="isShow">
+    <div class="loading-global" v-show="isShow">
         <div class="loading-content">
-          <div class="loading-text">{{ text }}</div>
-          <div class="loading-icon">
-            <img src="@/assets/images/loading.gif" alt="" />
-          </div>
-        </div>
-      </div>
-    </transition> -->
-
-        <!-- 使用vant-ui自带的 -->
-        <div class="loading-global" v-show="isShow">
-            <div class="loading-content">
-                <van-loading :type="vantLoadingConfig.type" :color="vantLoadingConfig.color" vertical>{{
-                    text
-                }}</van-loading>
-            </div>
+            <van-loading size="24px" text-size="14px" type="spinner" color="#fff" vertical>{{ text }}</van-loading>
         </div>
     </div>
 </template>
@@ -28,13 +13,7 @@
 export default {
     name: '',
     data() {
-        return {
-            vantLoadingConfig: {
-                // type: 'spinner',
-                type: 'circular',
-                color: '#1989fa',
-            },
-        }
+        return {}
     },
     props: {
         isShow: {
@@ -46,6 +25,8 @@ export default {
             default: '',
         },
     },
+    computed: {},
+    created() {},
     mounted() {},
     methods: {},
     components: {},
@@ -53,53 +34,32 @@ export default {
 </script>
 <style lang="less" scoped>
 //@import url(); 引入公共css类
-.loading-transition-enter,
-.loading-transition-leave-to {
-    opacity: 1;
-}
-.loading-transition-leave,
-.loading-transition-enter-to {
-    opacity: 0;
-}
-.loading-transition-enter-active,
-.loading-transition-leave-active {
-    transition: all 0.3s;
-}
-
 .loading-global {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1999;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    transition: opacity 0.3s linear;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
 
     .loading-content {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
 
-        .loading-text {
-            color: orange;
-            line-height: 64px;
-            font-size: 32px;
-            text-align: center;
-        }
-
-        .loading-icon {
-            width: 80px;
-            height: 80px;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        /deep/ .van-loading__text {
+            color: rgb(224, 222, 222);
         }
     }
 }

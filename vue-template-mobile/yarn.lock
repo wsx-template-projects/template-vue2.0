@@ -23,7 +23,7 @@
     "invariant" "^2.2.4"
     "semver" "^5.5.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.9.0":
+"@babel/core@*", "@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.9.0":
   "integrity" "sha512-kWc7L0fw1xwvI0zi8OKVBuxRVefwGOrKSQMvrQ3dW+bIIavBY3/NpXmpjMy7bQnLgwgzWQZ8TlM57YHpHNHz4w=="
   "resolved" "https://registry.npmjs.org/@babel/core/-/core-7.9.0.tgz"
   "version" "7.9.0"

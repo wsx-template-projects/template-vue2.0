@@ -93,11 +93,26 @@ const otherComponentRouter = [
     },
 ]
 
+/**
+ * 插件 - router
+ */
+const pluginsRouter = [
+    {
+        path: '/plugins',
+        name: 'Plugins',
+        component: () => import(/* webpackChunkName: 'plugins' */ '@/views/example/plugins'),
+        meta: {
+            title: '插件-plugins',
+        },
+    },
+]
+
 const exampleRouter = [
     ...baseComponentRouter,
     ...mapComponentRouter,
     ...operationComponentRouter,
     ...otherComponentRouter,
+    ...pluginsRouter,
 ]
 
 export default exampleRouter

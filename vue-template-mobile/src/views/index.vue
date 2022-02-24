@@ -4,6 +4,12 @@
 <template>
     <div class="index">
         <div class="btn-wrap">
+            <van-button type="primary" size="large" @click="jumpPage('/plugins')">
+                查看-插件
+            </van-button>
+        </div>
+
+        <div class="btn-wrap">
             <van-button type="primary" size="large" @click="jumpPage('/base')">
                 查看-基础组件
             </van-button>
