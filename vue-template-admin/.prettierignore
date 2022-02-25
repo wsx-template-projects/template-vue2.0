@@ -1,0 +1,7 @@
+/dist
+/src/libs
+/docs/*.html
+/public/static
+**/services
+src/mock/data
+mock/**
