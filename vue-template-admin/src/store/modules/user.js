@@ -2,12 +2,15 @@ import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import router, { resetRouter } from '@/router'
 
+const LocalMenus = require('@/menus.local')
+
 const state = {
     token: getToken(),
     name: '',
     avatar: '',
     introduction: '',
-    roles: []
+    roles: [],
+    user_menus: [], // 用户菜单
 }
 
 const mutations = {
@@ -25,10 +28,20 @@ const mutations = {
     },
     SET_ROLES: (state, roles) => {
         state.roles = roles
-    }
+    },
+    SET_USER_MENUS: (state, menus) => {
+        console.log('mutations-menus :>> ', menus)
+        state.user_menus = menus
+    },
 }
 
 const actions = {
+    // 生成用户的权限菜单和路由
+    generateMenus({ commit }, { menus = [] }) {
+        return new Promise((resolve) => {
+            let accessedMenus = []
+        })
+    },
     // user login
     login({ commit }, userInfo) {
         const { username, password } = userInfo
@@ -45,7 +58,6 @@ const actions = {
                 })
         })
     },
-
     // get user info
     getInfo({ commit, state }) {
         return new Promise((resolve, reject) => {
@@ -123,19 +135,21 @@ const actions = {
         const accessRoutes = await dispatch(
             'permission/generateRoutes',
             roles,
-            { root: true }
+            {
+                root: true,
+            },
         )
         // dynamically add accessible routes
         router.addRoutes(accessRoutes)
 
         // reset visited views and cached views
         dispatch('tagsView/delAllViews', null, { root: true })
-    }
+    },
 }
 
 export default {
     namespaced: true,
     state,
     mutations,
-    actions
+    actions,
 }
