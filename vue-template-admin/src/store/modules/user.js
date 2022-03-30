@@ -63,13 +63,31 @@ const actions = {
         return new Promise((resolve, reject) => {
             getInfo(state.token)
                 .then((response) => {
+                    // console.log('response :>> ', response)
+                    // todo 此处只用来处理本地的数据不为正常的
+                    // response = {
+                    //     Data: [
+                    //         {
+                    //             roles: ['admin'],
+                    //             name: '这是本地测试账号',
+                    //             avatar: '',
+                    //             introduction: '',
+                    //         },
+                    //     ],
+                    // }
+                    // const data = response.Data[0]
                     const { data } = response
 
                     if (!data) {
                         reject('Verification failed, please Login again.')
                     }
 
-                    const { roles, name, avatar, introduction } = data
+                    const {
+                        roles = ['admin'],
+                        name = '',
+                        avatar = '',
+                        introduction = '',
+                    } = data
 
                     // roles must be a non-empty array
                     if (!roles || roles.length <= 0) {
@@ -87,7 +105,6 @@ const actions = {
                 })
         })
     },
-
     // user logout
     logout({ commit, state, dispatch }) {
         return new Promise((resolve, reject) => {
@@ -95,13 +112,11 @@ const actions = {
                 .then(() => {
                     commit('SET_TOKEN', '')
                     commit('SET_ROLES', [])
-                    removeToken()
-                    resetRouter()
-
+                    removeToken() // 清除token
+                    resetRouter() // 重置路由
                     // reset visited views and cached views
                     // to fixed https://github.com/PanJiaChen/vue-element-admin/issues/2485
                     dispatch('tagsView/delAllViews', null, { root: true })
-
                     resolve()
                 })
                 .catch((error) => {
@@ -109,8 +124,7 @@ const actions = {
                 })
         })
     },
-
-    // remove token
+    /** remove token */
     resetToken({ commit }) {
         return new Promise((resolve) => {
             commit('SET_TOKEN', '')
@@ -119,8 +133,7 @@ const actions = {
             resolve()
         })
     },
-
-    // dynamically modify permissions
+    /** dynamically modify permissions */
     async changeRoles({ commit, dispatch }, role) {
         const token = role + '-token'
 
@@ -148,7 +161,7 @@ const actions = {
 }
 
 export default {
-    namespaced: true,
+    namespaced: true, // 开启命名空间
     state,
     mutations,
     actions,

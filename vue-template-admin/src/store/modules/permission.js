@@ -40,6 +40,7 @@ const state = {
 }
 
 const mutations = {
+    /** 设置路由表 */
     SET_ROUTES: (state, routes) => {
         state.addRoutes = routes
         state.routes = constantRoutes.concat(routes)
@@ -47,9 +48,11 @@ const mutations = {
 }
 
 const actions = {
+    /** 生成使用的异步路由表 */
     generateRoutes({ commit }, roles) {
         return new Promise((resolve) => {
             let accessedRoutes
+            console.log('roles :>> ', roles)
             if (roles.includes('admin')) {
                 accessedRoutes = asyncRoutes || []
             } else {
