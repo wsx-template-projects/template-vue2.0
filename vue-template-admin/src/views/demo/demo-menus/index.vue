@@ -111,52 +111,23 @@ export default {
                     },
                 ],
             },
-            // dialogFormRules: {
-            //     name: [
-            //         {
-            //             required: true,
-            //             message: '请输入部门名称',
-            //             trigger: 'blur',
-            //         },
-            //     ],
-            //     code: [
-            //         {
-            //             required: true,
-            //             message: '请输入部门简介',
-            //             trigger: 'blur',
-            //         },
-            //     ],
-            // },
             searchForm: {
                 name: '',
             },
             list: [],
             dialogFormVisible: false,
             dialogFormTitle: '',
-            // formLabelWidth: '80px',
-            // dialogForm: {
-            //     name: '',
-            //     code: '',
-            //     router: '',
-            //     icon: '',
-            //     status: '',
-            // },
             total: 0,
             listLoading: true,
             listQuery: {
                 page: 1,
                 limit: 20,
             },
+
+            dialogType: 'add', // 弹框的类型
         }
     },
-    watch: {
-        // dialogForm: {
-        //     handler(val) {
-        //         console.log('val :>> ', val)
-        //     },
-        //     deep: true,
-        // },
-    },
+    watch: {},
     created() {
         this.getList()
     },
@@ -165,21 +136,6 @@ export default {
         handleCallbackAddMenu(data) {
             console.log('data :>> ', data)
         },
-        // handleAvatarSuccess(res, file) {
-        //     this.dialogForm.icon = URL.createObjectURL(file.raw)
-        // },
-        // beforeAvatarUpload(file) {
-        //     const isPNG = file.type === 'image/png'
-        //     const isLt2M = file.size / 1024 / 1024 < 2
-
-        //     if (!isPNG) {
-        //         this.$message.error('上传头像图片只能是 PNG 格式!')
-        //     }
-        //     if (!isLt2M) {
-        //         this.$message.error('上传头像图片大小不能超过 2MB!')
-        //     }
-        //     return isPNG && isLt2M
-        // },
         search() {
             this.$refs['searchForm'].validate((valid) => {
                 if (valid) {
@@ -190,15 +146,15 @@ export default {
             })
         },
         addMenu() {
+            this.dialogType = 'add'
             this.dialogFormVisible = true
             this.dialogFormTitle = '新增菜单'
-            // this.resetForm('dialogForm')
         },
         addRow(index, row) {
             console.log(row)
+            this.dialogType = 'edit'
             this.dialogFormTitle = '新增下级'
             this.dialogFormVisible = true
-            //this.resetForm('dialogForm')
         },
         editRow(index, row) {
             console.log(row)
@@ -206,11 +162,6 @@ export default {
             this.dialogFormVisible = true
             this.dialogFormTitle = '编辑菜单'
             this.$refs.addmenuRef.getInitFormData(row)
-            //this.resetForm('dialogForm')
-            // this.dialogForm.name = row.name
-            // this.dialogForm.code = row.code
-            // this.dialogForm.router = row.router
-            // this.dialogForm.status = row.status
         },
         deleteRow(index, row) {
             this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
@@ -232,27 +183,6 @@ export default {
                     })
                 })
         },
-        // resetForm(formName) {
-        //     this.$refs[formName] && this.$refs[formName].resetFields()
-        // },
-        // cancel() {
-        //     this.dialogFormVisible = false
-        //     this.resetForm('dialogForm')
-        // },
-        // submitCon() {
-        //     this.$refs['dialogForm'].validate((valid) => {
-        //         if (valid) {
-        //             // console.log(this.dialogForm)
-        //             const params = { ...this.dialogForm }
-        //             console.log('params :>> ', params)
-        //             // todo 即将请求接口
-        //             setTimeout(() => {
-        //                 this.dialogFormVisible = false
-        //             }, 1000)
-        //             //this.resetForm('dialogForm')
-        //         }
-        //     })
-        // },
         getList() {
             this.listLoading = true
             ;(this.list = [
