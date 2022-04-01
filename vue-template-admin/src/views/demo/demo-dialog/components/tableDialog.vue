@@ -1,93 +1,46 @@
 <!--
-   新增菜单 - dialog
+   table - dialog
 -->
 <template>
     <div class="components-dialog">
         <el-dialog
             :title="title"
             :width="width"
-            :visible.sync="dialogFormVisible"
-            @close="resetForm('dialogForm')"
+            :visible.sync="dialogVisible"
+            @close="handleClose"
         >
             <el-form
-                ref="dialogForm"
-                :model="dialogForm"
-                :rules="dialogFormRules"
+                ref="formRef"
+                :model="formFields"
+                :rules="formRules"
+                :label-width="labelWidth"
             >
-                <el-form-item
-                    label="菜单名称"
-                    prop="name"
-                    :label-width="formLabelWidth"
-                >
+                <el-form-item label="姓名" prop="name">
                     <el-input
-                        v-model="dialogForm.name"
-                        autocomplete="off"
-                        placeholder="请输入菜单名称"
+                        v-model="formFields.name"
+                        placeholder="请输入姓名"
                     />
                 </el-form-item>
-                <el-form-item
-                    label="菜单编码"
-                    prop="code"
-                    :label-width="formLabelWidth"
-                >
+                <el-form-item label="地址" prop="address">
                     <el-input
-                        v-model="dialogForm.code"
-                        autocomplete="off"
-                        placeholder="请输入菜单编码"
+                        v-model="formFields.address"
+                        placeholder="请输入地址"
                     />
                 </el-form-item>
-                <el-form-item
-                    label="路由地址"
-                    prop="router"
-                    :label-width="formLabelWidth"
-                >
+                <el-form-item label="日期" prop="date">
                     <el-input
-                        v-model="dialogForm.router"
-                        autocomplete="off"
-                        placeholder="请输入路由地址"
+                        v-model="formFields.date"
+                        placeholder="请输入日期"
                     />
-                </el-form-item>
-                <el-form-item
-                    label="上传图标"
-                    prop="icon"
-                    :label-width="formLabelWidth"
-                >
-                    <el-upload
-                        class="avatar-uploader"
-                        action="https://jsonplaceholder.typicode.com/posts/"
-                        :show-file-list="false"
-                        :on-success="handleAvatarSuccess"
-                        :before-upload="beforeAvatarUpload"
-                    >
-                        <img
-                            v-if="dialogForm.icon"
-                            :src="dialogForm.icon"
-                            class="avatar"
-                        />
-                        <i
-                            v-else
-                            class="el-icon-upload2 avatar-uploader-icon"
-                        ></i>
-                    </el-upload>
-                </el-form-item>
-                <el-form-item
-                    label="状态"
-                    prop="status"
-                    :label-width="formLabelWidth"
-                >
-                    <el-select
-                        v-model="dialogForm.status"
-                        placeholder="请选择状态"
-                    >
-                        <el-option label="正常" value="0" />
-                        <el-option label="禁用" value="1" />
-                    </el-select>
                 </el-form-item>
             </el-form>
             <template #footer>
                 <span class="dialog-footer">
-                    <el-button @click="cancel">取消</el-button>
-                    <el-button type="primary" @click="submitCon"
+                    <el-button @click="onCancel">取消</el-button>
+                    <el-button
+                        type="primary"
+                        :loading="isLoading"
+                        @click="onSubmit"
                         >确定</el-button
                     >
                 </span>
@@ -101,6 +54,11 @@ export default {
     name: '',
     components: {},
     props: {
+        /** 弹框类型 add/edit */
+        type: {
+            type: String,
+            default: 'add',
+        },
         /** 弹框标题 */
         title: {
             type: String,
@@ -114,31 +72,37 @@ export default {
         /** 弹框宽度 */
         width: {
             type: String,
-            default: '30%',
+            default: '800px',
         },
     },
     data() {
         return {
-            formLabelWidth: '80px',
-            dialogForm: {
+            labelWidth: '100px',
+            isLoading: false,
+            formFields: {
                 name: '',
-                code: '',
-                router: '',
-                icon: '',
-                status: '',
+                address: '',
+                date: '',
             },
-            dialogFormRules: {
+            formRules: {
                 name: [
                     {
                         required: true,
-                        message: '请输入部门名称',
+                        message: '请输入姓名',
                         trigger: 'blur',
                     },
                 ],
-                code: [
+                address: [
                     {
                         required: true,
-                        message: '请输入部门简介',
+                        message: '请输入地址',
+                        trigger: 'blur',
+                    },
+                ],
+                date: [
+                    {
+                        required: true,
+                        message: '请输入日期',
                         trigger: 'blur',
                     },
                 ],
@@ -146,7 +110,7 @@ export default {
         }
     },
     computed: {
-        dialogFormVisible: {
+        dialogVisible: {
             get() {
                 return this.visible
             },
@@ -157,8 +121,8 @@ export default {
     },
     watch: {
         visible(newV, oldV) {
-            console.log('newV :>> ', newV)
-            console.log('oldV :>> ', oldV)
+            // console.log('newV :>> ', newV)
+            // console.log('oldV :>> ', oldV)
         },
     },
     created() {},
@@ -166,67 +130,48 @@ export default {
     methods: {
         /** 获取初始化的formData表单数据，主要用来处理编辑 */
         getInitFormData(data) {
-            console.log('form-data :>> ', data)
-            this.dialogForm = { ...data }
+            console.log('init-form-data :>> ', data)
+            this.formFields = { ...data }
+        },
+        handleClose() {
+            console.log('close :>> ')
+            this.resetForm()
         },
         /** 重置 */
-        resetForm(formName) {
-            console.log('重置 :>> ')
-            this.$refs[formName] && this.$refs[formName].resetFields()
-            this.$emit('callback', false)
+        resetForm() {
+            console.log('reset :>> ')
+            this.formFields = { name: '', address: '', date: '' }
+            this.$refs['formRef'] && this.$refs['formRef'].resetFields()
         },
         /** 取消 */
-        cancel() {
-            console.log('取消 :>> ')
-            this.dialogFormVisible = false
+        onCancel() {
+            console.log('cancel :>> ')
+            this.dialogVisible = false
         },
         /** 确认/提交 */
-        submitCon() {
-            this.$refs['dialogForm'].validate((valid) => {
-                if (valid) {
-                    // console.log(this.dialogForm)
-                    const params = { ...this.dialogForm }
-                    console.log('params :>> ', params)
-                    // todo 即将请求接口
-                    setTimeout(() => {
-                        this.dialogFormVisible = false
-                        this.$emit('callback', true)
-                    }, 1000)
+        onSubmit() {
+            console.log('submit :>> ')
+            this.$refs['formRef'].validate((valid) => {
+                if (!valid) {
+                    console.log('error submit!!! :>> ')
+                    return false
                 }
+                // todo 即将请求接口
+                const params = { ...this.formFields }
+                console.log('params :>> ', params)
+                this.isLoading = true
+                setTimeout(() => {
+                    this.isLoading = false
+                    this.dialogVisible = false
+                    const msg = this.type === 'add' ? '添加成功' : '编辑成功'
+                    this.$message.success(msg)
+                    this.$emit('success')
+                }, 1000)
             })
-        },
-        handleAvatarSuccess(res, file) {
-            this.dialogForm.icon = URL.createObjectURL(file.raw)
-        },
-        beforeAvatarUpload(file) {
-            const isPNG = file.type === 'image/png'
-            const isLt2M = file.size / 1024 / 1024 < 2
-
-            if (!isPNG) {
-                this.$message.error('上传头像图片只能是 PNG 格式!')
-            }
-            if (!isLt2M) {
-                this.$message.error('上传头像图片大小不能超过 2MB!')
-            }
-            return isPNG && isLt2M
         },
     },
 }
 </script>
 <style lang="scss" scoped>
 //@import url(); 引入公共css类
-.avatar-uploader {
-    height: 36px;
-    line-height: 36px;
-    border-radius: 4px;
-    border: 1px solid #dcdfe6;
-    text-align: right;
-    padding: 0 15px;
-}
-.avatar-uploader img {
-    display: inline-block;
-    width: 23px;
-    height: auto;
-    padding-top: 6px;
-}
 </style>

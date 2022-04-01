@@ -6,7 +6,15 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
-// 自动化导入模块
+/**
+ * 自动化导入模块，使用场景：遇到从一个文件夹引入很多模块的情况,
+ * 可以使用这个api,它会遍历文件夹中的指定文件,然后自动导入,
+ * 使得不需要每次显式的调用import导入模块
+ * @parma require.context 有三个参数
+ * @param {string} directory 读取文件的路径
+ * @param {boolean} useSubdirectories 是否遍历文件的子目录
+ * @param {regExp} regExp 匹配文件的正则
+ */
 const requireComponents = require.context('./modules', false, /.js$/)
 
 const modules = requireComponents.keys().reduce((prev, curr) => {

@@ -25,13 +25,19 @@
                 <el-table-column fixed="right" label="操作">
                     <template slot-scope="{ row, $index }">
                         <el-button
-                            type="text"
+                            type="danger"
+                            size="small"
+                            @click="onDel(row, $index)"
+                            >删除</el-button
+                        >
+                        <el-button
+                            type="primary"
                             size="small"
                             @click="onEdit(row, $index)"
                             >编辑</el-button
                         >
                         <el-button
-                            type="text"
+                            type="default"
                             size="small"
                             @click="onCleck(row, $index)"
                             >查看</el-button
@@ -46,21 +52,31 @@
             ref="formDialogRef"
             :type="dialogType"
             :title="dialogTitle"
-            :visible.sync="dialogVisible"
+            :visible.sync="formDialogVisible"
             @callback="handleCallbackFormDialog"
+        />
+
+        <!-- 列表dialog -->
+        <table-dialog
+            ref="tableDialogRef"
+            :title="dialogTitle"
+            :visible.sync="tableDialogVisible"
+            @callback="handleCallbackTableDialog"
         />
     </div>
 </template>
 
 <script>
 import FormDialog from './components/formDialog.vue'
+import TableDialog from './components/tableDialog.vue'
 export default {
-    components: { FormDialog },
+    components: { FormDialog, TableDialog },
     data() {
         return {
             dialogType: 'add',
             dialogTitle: '',
-            dialogVisible: false,
+            formDialogVisible: false,
+            tableDialogVisible: false,
             tableData: [
                 {
                     date: '2016-05-02',
@@ -88,28 +104,38 @@ export default {
     watch: {},
     created() {},
     methods: {
-        /** 弹框关闭回调函数，用来处理关闭弹框后需要执行后续操作 */
+        /** 表单弹框关闭回调函数，用来处理关闭弹框后需要执行后续操作 */
         handleCallbackFormDialog(data) {
             console.log('data :>> ', data)
         },
-        /** 新增 */
+        /** 表格弹框关闭回调函数，用来处理关闭弹框后需要执行后续操作 */
+        handleCallbackTableDialog(data) {
+            console.log('data :>> ', data)
+        },
+        /** 表单新增 */
         onAddForm() {
             this.dialogType = 'add'
-            this.dialogTitle = '新增'
-            this.dialogVisible = true
+            this.dialogTitle = '表单新增'
+            this.formDialogVisible = true
         },
-        /**  */
+        /** 列表查询 */
         onAddTable() {
-            console.log('add table :>> ')
-            this.$message.warning('暂未开放...')
+            this.dialogTitle = '列表查询'
+            this.tableDialogVisible = true
         },
-        /** 编辑 */
+        /** 删除 */
+        onDel(row, index) {
+            console.log('del :>>')
+            console.log('row :>> ', row)
+            console.log('index :>> ', index)
+        },
+        /** 表单编辑 */
         onEdit(row, index) {
             console.log('row :>> ', row)
             console.log('index :>> ', index)
             this.dialogType = 'edit'
-            this.dialogTitle = '编辑'
-            this.dialogVisible = true
+            this.dialogTitle = '表单编辑'
+            this.formDialogVisible = true
             this.$refs.formDialogRef.getInitFormData(row)
         },
         /** 查看 */
