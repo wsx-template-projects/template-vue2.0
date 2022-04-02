@@ -5,6 +5,13 @@
                 class=""
                 type="primary"
                 icon="el-icon-plus"
+                @click="onOpenDialog"
+                >全局dialog打开方式</el-button
+            >
+            <el-button
+                class=""
+                type="primary"
+                icon="el-icon-plus"
                 @click="onAddForm"
                 >表单弹框</el-button
             >
@@ -111,6 +118,18 @@ export default {
         /** 表格弹框关闭回调函数，用来处理关闭弹框后需要执行后续操作 */
         handleCallbackTableDialog(data) {
             console.log('data :>> ', data)
+        },
+        /** 批量报送 */
+        onOpenDialog() {
+            this.$modalDialog(() => import('./components/globalDialog.vue'), {
+                title: '标题',
+            })
+                .then((res) => {
+                    console.log('res :>> ', res)
+                })
+                .catch((err) => {
+                    console.log('err :>> ', err)
+                })
         },
         /** 表单新增 */
         onAddForm() {

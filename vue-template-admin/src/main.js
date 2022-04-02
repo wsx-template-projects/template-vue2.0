@@ -7,6 +7,8 @@ import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 import Element from 'element-ui'
 import './styles/element-variables.scss'
 
+import ModalDialog from './plugins/modalDialog'
+
 import '@/styles/index.scss' // global css
 
 import App from './App'
@@ -19,6 +21,8 @@ import './permission' // permission control
 import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
+
+Vue.prototype.$modalDialog = ModalDialog // 全局dialog
 
 /**
  * If you don't want to use mock-server
