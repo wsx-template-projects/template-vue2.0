@@ -35,17 +35,17 @@
                     >
                 </div>
                 <div class="content-bottom">
-                    <upload-file
+                    <!-- <upload-file
                         v-model="fileList"
                         list-type="text"
                         :limit="1"
                         :upload-config="uploadConfig"
                         @remove="handleFileRemove"
-                    />
+                    /> -->
                 </div>
             </div>
 
-            <div class="dialog-footer" slot="footer">
+            <div slot="footer" class="dialog-footer">
                 <el-button type="primary" @click="onSubmit">提交</el-button>
             </div>
         </el-dialog>
@@ -53,10 +53,10 @@
 </template>
 
 <script>
-import UploadFile from '@/entry/client/components/upload-file'
+// import UploadFile from '@/entry/client/components/upload-file'
 export default {
     name: '',
-    components: { UploadFile },
+    // components: { UploadFile },
     props: {
         title: {
             type: String,
@@ -94,7 +94,7 @@ export default {
     },
 }
 </script>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 //@import url(); 引入公共css类
 .dialog-content {
     font-size: 14px;
