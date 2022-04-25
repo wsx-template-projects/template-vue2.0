@@ -19,6 +19,14 @@ const demoRouter = {
             },
         },
         {
+            path: 'demo-list',
+            name: 'DemoList',
+            component: () => import('@/views/demo/demo-list'),
+            meta: {
+                title: 'demo-list',
+            },
+        },
+        {
             path: 'demo-dialog',
             name: 'DemoDialog',
             component: () => import('@/views/demo/demo-dialog'),
