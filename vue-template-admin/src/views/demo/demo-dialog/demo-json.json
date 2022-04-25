@@ -1,0 +1,1023 @@
+[
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 120,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 120,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 120,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ],
+    [
+        {
+            "id": 0,
+            "chooseKey": 0,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 1,
+            "chooseKey": 1,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 2,
+            "chooseKey": 2,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 3,
+            "chooseKey": 3,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 4,
+            "chooseKey": 4,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 5,
+            "chooseKey": 5,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 6,
+            "chooseKey": 6,
+            "val": 110,
+            "checked": false
+        },
+        {
+            "id": 7,
+            "chooseKey": 7,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 8,
+            "chooseKey": 8,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 9,
+            "chooseKey": 9,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 10,
+            "chooseKey": 10,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 11,
+            "chooseKey": 11,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 12,
+            "chooseKey": 12,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 13,
+            "chooseKey": 13,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 14,
+            "chooseKey": 14,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 15,
+            "chooseKey": 15,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 16,
+            "chooseKey": 16,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 17,
+            "chooseKey": 17,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 18,
+            "chooseKey": 18,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 19,
+            "chooseKey": 19,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 20,
+            "chooseKey": 20,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 21,
+            "chooseKey": 21,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 22,
+            "chooseKey": 22,
+            "val": 100,
+            "checked": false
+        },
+        {
+            "id": 23,
+            "chooseKey": 23,
+            "val": 100,
+            "checked": false
+        }
+    ]
+]

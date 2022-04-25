@@ -76,6 +76,7 @@
 <script>
 import FormDialog from './components/formDialog.vue'
 import TableDialog from './components/tableDialog.vue'
+import DemoJson from './demo-json.json'
 export default {
     components: { FormDialog, TableDialog },
     data() {
@@ -109,8 +110,34 @@ export default {
         }
     },
     watch: {},
-    created() {},
+    created() {
+        const jsonData = DemoJson
+        console.log('jsonData', jsonData)
+        const result = jsonData.map((v) => this.handleJsonData(v))
+        console.log('result', result)
+    },
     methods: {
+        handleJsonData(list) {
+            console.log('list', list)
+            const stack = [...list]
+            const temp = []
+            while (stack.length) {
+                const pop = stack.shift()
+                console.log('pop', pop)
+                const isHas = temp.some((item) =>
+                    item.some((v) => v.val === pop.val),
+                )
+                if (isHas) {
+                } else {
+                    temp.push([pop])
+                }
+            }
+            return temp
+        },
+        isHas(list, key, value) {
+            let isIdx = list.findIndex((v) => v[key] === value)
+            console.log('isIdx', isIdx)
+        },
         /** 表单弹框关闭回调函数，用来处理关闭弹框后需要执行后续操作 */
         handleCallbackFormDialog(data) {
             console.log('data :>> ', data)
