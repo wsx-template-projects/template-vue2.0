@@ -31,7 +31,18 @@
                 </draggable>
             </div>
 
-            <div class="group-setting content-right">配置项</div>
+            <div class="group-setting content-right">
+                <div class="right-title">{{ configData.title }}</div>
+                <div class="config-wrapper">
+                    <div
+                        v-for="(item, index) in configData.list"
+                        :key="index"
+                        class="item"
+                    >
+                        <svg-icon :icon-class="item.icon" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -61,6 +72,26 @@ export default {
                 },
             ],
             wrapList: [],
+            configData: {
+                title: '图表类型：',
+                list: [
+                    {
+                        label: '折线图',
+                        icon: 'svg-chart-line',
+                        disableIcon: 'svg-chart-line-disabled',
+                    },
+                    {
+                        label: '柱状图',
+                        icon: 'svg-chart-bar',
+                        disableIcon: 'svg-chart-bar-disabled',
+                    },
+                    {
+                        label: '饼图',
+                        icon: 'svg-chart-pie',
+                        disableIcon: 'svg-chart-pie-disabled',
+                    },
+                ],
+            },
         }
     },
     computed: {},
@@ -129,6 +160,33 @@ export default {
         width: 240px;
         border: 1px solid rgb(238, 236, 236);
         border-bottom: none;
+
+        .right-title {
+            line-height: 36px;
+            border-bottom: 1px solid #ccc;
+            padding: 0 10px;
+        }
+
+        .config-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 10px 0;
+
+            .item {
+                padding: 10px;
+                margin: 0 10px 10px 0;
+
+                &:hover {
+                    background: #ccc;
+                }
+
+                .svg-icon {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 </style>
