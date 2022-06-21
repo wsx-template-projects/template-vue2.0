@@ -83,7 +83,7 @@ export default {
             // 1、清除画布
             this.myChart.clear()
             // 2、设置 option
-            let opt = options || this.options
+            let opt = options || this.option
             console.log('chart-options :>> ', opt)
             if (this.isHasGradients) {
                 opt = this.setGradientsOption(opt, this.gradientsOption)
