@@ -11,4 +11,51 @@
             <h1>20220329</h1>
         </div>
     </body>
+    <script>
+        const startDate = '20220511'
+        console.log('日期 :>> ', new Date())
+        const year = new Date().getFullYear()
+        const month = new Date().getMonth()
+        const day = new Date().getDate()
+        console.log('year :>> ', year)
+        console.log('month :>> ', month)
+        console.log('day :>> ', day)
+        const currentDate = `${year}${
+            month + 1 < 10 ? '0' + (month + 1) : month + 1
+        }${day < 10 ? '0' + day : day}`
+        console.log('currentDate :>> ', currentDate)
+
+        /**
+         * 动态引入js文件
+         */
+        function dynamicLoadJs(url, callback) {
+            let script = document.createElement('script')
+            script.type = 'text/javascript'
+            script.src = url
+            if (typeof callback == 'function') {
+                script.onload = script.onreadystatechange = function () {
+                    if (
+                        !this.readyState ||
+                        this.readyState === 'loaded' ||
+                        this.readyState === 'complete'
+                    ) {
+                        callback()
+                        script.onload = script.onreadystatechange = null
+                    }
+                }
+            }
+            document.body.appendChild(script)
+        }
+
+        window.onload = function () {
+            dynamicLoadJs('./js/20220511.js', (res) => {
+                console.log('js文件加载完成 :>> ')
+                console.log('res :>> ', res)
+            })
+            dynamicLoadJs('./js/20220513.js', (res) => {
+                console.log('js文件加载完成 :>> ')
+                console.log('res :>> ', res)
+            })
+        }
+    </script>
 </html>
