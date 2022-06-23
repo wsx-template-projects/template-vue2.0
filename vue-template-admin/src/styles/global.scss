@@ -2,3 +2,10 @@
 .sg-page {
     padding: 20px;
 }
+
+.ws-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 84px);
+    padding: 20px;
+}
