@@ -3,48 +3,52 @@
 -->
 <template>
     <div class="ws-page">
-        <h1>form-setting</h1>
-        <div class="">
-            <el-scrollbar class="left-scrollbar">
-                <div class="components-list">
-                    <div
-                        v-for="(item, listIndex) in leftComponents"
-                        :key="listIndex"
-                    >
-                        <div class="components-title">
-                            <svg-icon icon-class="component" />
-                            {{ item.title }}
-                        </div>
-                        <draggable
-                            class="components-draggable"
-                            :list="item.list"
-                            :group="{
-                                name: 'componentsGroup',
-                                pull: 'clone',
-                                put: false,
-                            }"
-                            :clone="cloneComponent"
-                            draggable=".components-item"
-                            :sort="false"
-                            @end="onEnd"
+        <div class="left-board">
+            <h1>form-setting</h1>
+            <div class="">
+                <el-scrollbar class="left-scrollbar">
+                    <div class="components-list">
+                        <div
+                            v-for="(item, listIndex) in leftComponents"
+                            :key="listIndex"
                         >
-                            <div
-                                v-for="(element, index) in item.list"
-                                :key="index"
-                                class="components-item"
-                                @click="addComponent(element)"
-                            >
-                                <div class="components-body">
-                                    <svg-icon
-                                        :icon-class="element.__config__.tagIcon"
-                                    />
-                                    {{ element.__config__.label }}
-                                </div>
+                            <div class="components-title">
+                                <svg-icon icon-class="component" />
+                                {{ item.title }}
                             </div>
-                        </draggable>
+                            <draggable
+                                class="components-draggable"
+                                :list="item.list"
+                                :group="{
+                                    name: 'componentsGroup',
+                                    pull: 'clone',
+                                    put: false,
+                                }"
+                                :clone="cloneComponent"
+                                draggable=".components-item"
+                                :sort="false"
+                                @end="onEnd"
+                            >
+                                <div
+                                    v-for="(element, index) in item.list"
+                                    :key="index"
+                                    class="components-item"
+                                    @click="addComponent(element)"
+                                >
+                                    <div class="components-body">
+                                        <svg-icon
+                                            :icon-class="
+                                                element.__config__.tagIcon
+                                            "
+                                        />
+                                        {{ element.__config__.label }}
+                                    </div>
+                                </div>
+                            </draggable>
+                        </div>
                     </div>
-                </div>
-            </el-scrollbar>
+                </el-scrollbar>
+            </div>
         </div>
     </div>
 </template>
@@ -55,13 +59,32 @@ import {
     selectComponents,
     layoutComponents,
     formConf,
-} from '@/utils/generator/config'
+} from '../scripts/config'
+import {
+    exportDefault,
+    beautifierConf,
+    isNumberStr,
+    titleCase,
+    deepClone,
+} from '../scripts/utils'
+import {
+    getDrawingList,
+    saveDrawingList,
+    getIdGlobal,
+    saveIdGlobal,
+    getFormConf,
+} from '@/utils/db'
 import draggable from 'vuedraggable'
+
+let tempActiveData
+const idGlobal = getIdGlobal()
+
 export default {
     name: 'VisualConfigFormSetting',
     components: { draggable },
     data() {
         return {
+            formConf,
             leftComponents: [
                 {
                     title: '输入型组件',
@@ -86,25 +109,38 @@ export default {
         /**
          *
          */
+        onEnd(obj) {
+            if (obj.from !== obj.to) {
+                // this.fetchData(tempActiveData)
+                // this.activeData = tempActiveData
+                // this.activeId = this.idGlobal
+            }
+        },
+        /**
+         *
+         */
         addComponent(item) {
             const clone = this.cloneComponent(item)
             this.fetchData(clone)
             this.drawingList.push(clone)
             this.activeFormItem(clone)
         },
+        /**
+         *
+         */
         fetchData(component) {
             console.log('component :>> ', component)
-            // const { dataType, method, url } = component.__config__
-            // if (dataType === 'dynamic' && method && url) {
-            //     this.setLoading(component, true)
-            //     this.$axios({
-            //         method,
-            //         url,
-            //     }).then((resp) => {
-            //         this.setLoading(component, false)
-            //         this.setRespData(component, resp.data)
-            //     })
-            // }
+            const { dataType, method, url } = component.__config__
+            if (dataType === 'dynamic' && method && url) {
+                // this.setLoading(component, true)
+                // this.$axios({
+                //     method,
+                //     url,
+                // }).then((resp) => {
+                //     this.setLoading(component, false)
+                //     this.setRespData(component, resp.data)
+                // })
+            }
         },
         activeFormItem(currentItem) {
             console.log('currentItem :>> ', currentItem)
@@ -123,6 +159,27 @@ export default {
                 (clone.placeholder += config.label)
             tempActiveData = clone
             return tempActiveData
+        },
+        /**
+         *
+         */
+        createIdAndKey(item) {
+            const config = item.__config__
+            config.formId = ++this.idGlobal
+            config.renderKey = `${config.formId}${+new Date()}` // 改变renderKey后可以实现强制更新组件
+            if (config.layout === 'colFormItem') {
+                item.__vModel__ = `field${this.idGlobal}`
+            } else if (config.layout === 'rowFormItem') {
+                config.componentName = `row${this.idGlobal}`
+                !Array.isArray(config.children) && (config.children = [])
+                delete config.label // rowFormItem无需配置label属性
+            }
+            if (Array.isArray(config.children)) {
+                config.children = config.children.map((childItem) =>
+                    this.createIdAndKey(childItem),
+                )
+            }
+            return item
         },
     },
 }
