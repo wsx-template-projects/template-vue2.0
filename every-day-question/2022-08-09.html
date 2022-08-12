@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>2022-08-09</title>
+        <script src="./js/jquery-2.0.3.min.js"></script>
+        <script src="./js/vue/vue.min.js"></script>
+    </head>
+    <body>
+        <div class="reportDiv" id="app">
+            <div class="time">
+                <h1>最后刷新时间</h1>
+                <h2 id="time"></h2>
+            </div>
+
+            <div class="wrapper pro_wrapper warn_wrapper">
+                <div class="txtMarquee-top1">
+                    <div class="bd">
+                        <ul>
+                            <li v-for="item in totalAbnormals">
+                                <span
+                                    >{{item.abnormal}}：<em class="orange"
+                                        >{{item.count}}</em
+                                    ></span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contain">
+                    <div class="item" v-for="item in areaInfos">
+                        <h2>{{item.name}}异常量：<i>{{item.totalCount}}</i></h2>
+                        <div class="list">
+                            <dl style="display: flex">
+                                <dd>充电架</dd>
+                                <dd>通道</dd>
+                                <dd>警告</dd>
+                                <dd>持续时间</dd>
+                            </dl>
+                            <div class="txtMarquee-top">
+                                <div id="wrap" class="bd">
+                                    <ul id="area">
+                                        <li v-for="detail in item.detail">
+                                            <span>{{detail.shelfName}}</span>
+                                            <span>{{detail.channelName}}</span>
+                                            <span>{{detail.abnormal}}</span>
+                                            <span>
+                                                <div
+                                                    class="progress"
+                                                    style="background: #999"
+                                                >
+                                                    <span
+                                                        style="
+                                                            line-height: 18px;
+                                                            padding: 0;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            width: 100%;
+                                                            display: inline-block;
+                                                        "
+                                                        >{{detail.abnormalDuration}}分</span
+                                                    >
+
+                                                    <div
+                                                        class="progress-bar"
+                                                        style="
+                                                            width: 33%;
+                                                            background: #008000;
+                                                        "
+                                                    ></div>
+                                                    <div
+                                                        class="
+                                                            progress-bar
+                                                            progress-bar-info
+                                                        "
+                                                        style="
+                                                            width: 33%;
+                                                            background: #ffa400;
+                                                        "
+                                                    ></div>
+                                                    <div
+                                                        class="
+                                                            progress-bar
+                                                            progress-bar-warning
+                                                        "
+                                                        style="
+                                                            width: 34%;
+                                                            background: #ff0200;
+                                                        "
+                                                    ></div>
+                                                </div>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h2 style="color: red">超时紧急处理</h2>
+                        <div class="list">
+                            <dl>
+                                <dd>充电架</dd>
+                                <dd>通道</dd>
+                                <dd>警告</dd>
+                                <dd>持续时间</dd>
+                            </dl>
+                            <div
+                                class="noData"
+                                v-show="overtimeAbNodata"
+                                style="color: #fff; padding: 30px 0"
+                            >
+                                暂无数据
+                            </div>
+                            <div
+                                class="txtMarquee-top2 spacWid"
+                                id="abnormalsList"
+                            >
+                                <ul id="abnormals">
+                                    <li v-for="item in emergencyAbnormals">
+                                        <span
+                                            style="
+                                                color: red;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            "
+                                            >1</span
+                                        >
+                                        <span>1</span>
+                                        <span>1</span>
+                                        <span>
+                                            <div
+                                                class="progress"
+                                                style="background: #999999"
+                                            >
+                                                <span
+                                                    class=""
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 100%;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: 0;
+                                                        padding: 0;
+                                                    "
+                                                    >1分</span
+                                                >
+                                                <div
+                                                    class="progress-bar"
+                                                    role="progressbar"
+                                                    aria-valuenow="60"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="
+                                                        width: 30%;
+                                                        background: red;
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul id="abnormalsCopy"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script
+                type="text/javascript"
+                src="./js/jquery.SuperSlide.2.1.1.js"
+            ></script>
+            <script>
+                $(".txtMarquee-top").slide({
+                    mainCell: ".bd ul",
+                    autoPlay: true,
+                    effect: "topMarquee",
+                    vis: 6,
+                    interTime: 50,
+                });
+                $(".txtMarquee-top1").slide({
+                    mainCell: ".bd ul",
+                    autoPlay: true,
+                    effect: "leftMarquee",
+                    vis: 10,
+                    interTime: 30,
+                });
+                $(".txtMarquee-top2").slide({
+                    mainCell: ".bd ul",
+                    autoPlay: true,
+                    effect: "topMarquee",
+                    vis: 6,
+                    interTime: 120,
+                });
+                //系统时间
+                function time() {
+                    var time = document.getElementById("time");
+                    var date = new Date();
+                    this.year = date.getFullYear();
+                    this.month = date.getMonth() + 1;
+                    this.date = date.getDate();
+                    this.day = new Array(
+                        "星期日",
+                        "星期一",
+                        "星期二",
+                        "星期三",
+                        "星期四",
+                        "星期五",
+                        "星期六"
+                    )[date.getDay()];
+                    this.hour =
+                        date.getHours() < 10
+                            ? "0" + date.getHours()
+                            : date.getHours();
+                    this.minute =
+                        date.getMinutes() < 10
+                            ? "0" + date.getMinutes()
+                            : date.getMinutes();
+                    this.second =
+                        date.getSeconds() < 10
+                            ? "0" + date.getSeconds()
+                            : date.getSeconds();
+                    var currentTime =
+                        this.year +
+                        "年" +
+                        this.month +
+                        "月" +
+                        this.date +
+                        "日 " +
+                        /*this.day + */ this.hour +
+                        ":" +
+                        this.minute;
+                    time.innerHTML = currentTime;
+                }
+                time();
+                setInterval(function () {
+                    time();
+                }, 1000);
+                var m = 40; // 滚动间隙
+                var areaBox = document.getElementById("abnormalsList"); // 获取父元素
+                var area = document.getElementById("abnormals");
+                var areaCopy = document.getElementById("abnormalsCopy");
+                console.log("areaBox:>>>", areaBox);
+                function UpCell() {
+                    if (areaBox.scrollTop >= area.offsetHeight) {
+                        areaBox.scrollTop = 0;
+                    } else {
+                        areaBox.scrollTop++;
+                    }
+                }
+                var setlIdCells = setInterval(UpCell, m);
+                //鼠标移上父元素时清除定时器
+                areaBox.onmouseover = function () {
+                    clearInterval(setlIdCells);
+                };
+
+                //鼠标离开父元素时触发事件
+                areaBox.onmouseout = function () {
+                    setlIdCells = setInterval(UpCell, m);
+                };
+            </script>
+        </div>
+
+        <script>
+            function createLiEls() {
+                var list = [];
+                var len = 16;
+                for (var i = 0; i < len; i++) {
+                    var temp = {
+                        shelfName: "大",
+                        channelName: "",
+                        abnormal: "欠压" + Math.ceil(Math.random() * 100),
+                        abnormalDuration: "0",
+                    };
+                    console.log("temp :>> ", temp);
+                    list.push(temp);
+                }
+                console.log("list :>> ", list);
+                return list;
+            }
+
+            let app = new Vue({
+                el: "#app",
+                data: {
+                    animate: false,
+                    productLineId: "",
+                    lineName: "",
+                    totalAbnormals: [],
+                    areaInfos: [],
+                    emergencyAbnormals: [],
+                    overtimeAbNodata: false,
+                    parentId: "",
+                },
+                mounted() {
+                    setInterval(() => {
+                        this.getNextList();
+                    }, 5000);
+                },
+                created() {
+                    this.getList();
+                },
+                methods: {
+                    getNextList() {
+                        setTimeout(() => {
+                            console.log("下一页数据 :>> ");
+                            this.$set(this.areaInfos[0], "detail", [
+                                // ...this.areaInfos[0].detail,
+                                ...createLiEls(),
+                            ]);
+                            // this.areaInfos[0].detail = [
+                            //     ...this.areaInfos[0].detail,
+                            //     ...createLiEls(),
+                            // ];
+                            console.log("this.areaInfos :>> ", this.areaInfos);
+                            // this.$nextTick(() => {
+                            //     $(".txtMarquee-top").slide({
+                            //         mainCell: ".bd ul",
+                            //         autoPlay: true,
+                            //         effect: "topMarquee",
+                            //         vis: 6,
+                            //         interTime: 50,
+                            //     });
+                            // });
+                        }, 500);
+                    },
+                    getList() {
+                        var res = {
+                            data: {
+                                areaInfos: [],
+                                totalAbnormals: 0,
+                                emergencyAbnormals: [],
+                                channels: [],
+                            },
+                        };
+                        setTimeout(() => {
+                            var obj = {
+                                detail: [
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                    {
+                                        shelfName: "大",
+                                        channelName: "",
+                                        abnormal: "欠压1",
+                                        abnormalDuration: "0",
+                                    },
+                                ],
+                                name: "大SAVv",
+                                totalCount: 1,
+                            };
+                            res.data.areaInfos.push(obj);
+                            this.lineName = res.data.lineName;
+                            this.totalAbnormals = res.data.totalAbnormals;
+                            this.areaInfos = res.data.areaInfos;
+                            if (!res.data.emergencyAbnormals.length) {
+                                this.overtimeAbNodata = true;
+                                this.emergencyAbnormals = [];
+                            } else {
+                                this.overtimeAbNodata = false;
+                                this.emergencyAbnormals = res.data.channels;
+                            }
+                            console.log(res);
+                            this.$nextTick(() => {
+                                $(".txtMarquee-top").slide({
+                                    mainCell: ".bd ul",
+                                    autoPlay: true,
+                                    effect: "topMarquee",
+                                    vis: 6,
+                                    interTime: 50,
+                                });
+                                setTimeout(() => {}, 500);
+                            });
+                        }, 1000);
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
