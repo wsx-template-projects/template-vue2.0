@@ -486,7 +486,7 @@ export function findNode(tree: any[], key: any, value: any) {
 }
 
 /**
- * 判断数组中是否包含某条数据 (注意：只支持单个属性昨比较)
+ * 判断数组中是否包含某条数据 (注意：只支持单个属性做比较)
  * @param {array} list 数据源
  * @param {string} key 相比较的属性 - 属性名
  * @param {*} value 相比较的属性 - 属性值

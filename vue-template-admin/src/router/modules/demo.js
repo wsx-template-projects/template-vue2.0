@@ -35,6 +35,14 @@ const demoRouter = {
             },
         },
         {
+            path: 'demo-other',
+            name: 'DemoOther',
+            component: () => import('@/views/demo/demo-other'),
+            meta: {
+                title: 'demo-other',
+            },
+        },
+        {
             path: 'demo-draggable',
             name: 'DemoDraggable',
             component: () => import('@/views/demo/demo-draggable'),
