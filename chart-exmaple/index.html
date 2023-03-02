@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gauge-chart</title>
+        <!-- import Vue before Element -->
+        <script src="./static/vue/2.6.11/vue.min.js"></script>
+        <!-- 引入样式 -->
+        <link
+            rel="stylesheet"
+            href="./static/element-ui/2.13.2/theme-chalk/index.css"
+        />
+        <!-- 引入组件库 -->
+        <script src="./static/element-ui/2.13.2/index.js"></script>
+        <script src="./static/echarts/5.3.2/echarts.min.js"></script>
+        <script src="./components/gauge-chart.js"></script>
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            #app {
+                width: 100%;
+                height: 100%;
+            }
+            .gauge-chart-view {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="gauge-chart-view">
+                <gauge-chart class="" v-bind="options" />
+            </div>
+        </div>
+    </body>
+    <script>
+        console.log('Vue :>> ', Vue)
+        new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    options: {
+                        number: 620,
+                        total: 1000,
+                        hasCustomColor: true,
+                        angleConfig: {
+                            startAngle: 240,
+                            endAngle: -60,
+                        },
+                        customColor: [
+                            [0.7, 'red'],
+                            [0.8, 'orange'],
+                            [1, 'rgb(42, 221, 96)'],
+                        ],
+                        options: {
+                            title: {
+                                text: '优秀',
+                                top: '60%',
+
+                                textStyle: {
+                                    color: 'rgb(42, 221, 96)',
+                                },
+                            },
+                            series: [
+                                {
+                                    pointer: {
+                                        itemStyle: {
+                                            color: 'rgb(42, 221, 96)',
+                                        },
+                                    },
+                                    title: {
+                                        textStyle: {
+                                            color: '#333',
+                                        },
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                }
+            },
+        })
+    </script>
+</html>

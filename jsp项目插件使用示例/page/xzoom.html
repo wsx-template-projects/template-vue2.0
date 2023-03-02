@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+        <!-- <link rel="stylesheet" href="/core/lib/xzoom/xzoom.css" /> -->
+        <!-- <script src="/core/lib/jquery/jQuery-3.2.1.js"></script> -->
+        <!-- <script src="/core/lib/xzoom/xzoom.min.js"></script> -->
+        <!-- Bootstrap 的 transition.js cdn（过渡动画插件）-->
+        <!-- <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/transition.js"></script> -->
+        <!-- zoom.js 核心代码 -->
+        <!-- <script src="https://blog-static.cnblogs.com/files/lpp-11-15/zoom.js"></script> -->
+        　　　
+        <!-- zoom.js 的样式 -->
+        <!-- <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://blog-static.cnblogs.com/files/lpp-11-15/zoom.css"
+        />
+
+        <script type="text/javascript">
+            $('#cnblogs_post_body img').attr('data-action', 'zoom')
+        </script> -->
+
+        <script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+
+        <script src="https://unpkg.com/xzoom/dist/xzoom.css"></script>
+
+        <title>图片旋转放大</title>
+
+        <style>
+            #app {
+                font-size: 16px;
+            }
+
+            .rotate-btn {
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+
+            .xzoom {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ccc;
+            }
+
+            .img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <button class="rotate-btn">旋转图片</button>
+
+            <div class="xzoom">
+                <img
+                    src="http://recept.zjzwfw.gov.cn/media/oss/DEFAULT/FORM/u5T9zJ52_1666348269546.jpg"
+                    alt=""
+                    width="290"
+                    class="img"
+                    data-action="xzoom"
+                />
+                <!-- <img
+                    src="http://recept.zjzwfw.gov.cn/media/oss/DEFAULT/FORM/u5T9zJ52_1666348269546.jpg"
+                    alt=""
+                    class="zoom-img"
+                    data-action="xzoom"
+                /> -->
+            </div>
+        </div>
+    </body>
+    <script>
+        let currentRotate = 0
+        const btnEl = $('.rotate-btn')
+        const imgWrapEl = $('.xzoom')
+        btnEl.click(function () {
+            if (currentRotate === 360) {
+                currentRotate = 0
+            }
+            currentRotate += 90
+            imgWrapEl.css({ transform: 'rotate(' + currentRotate + 'deg)' })
+        })
+
+        initMagnifying1()
+
+        function initMagnifying1() {
+            console.log('img :>> ', $('.img'))
+            console.log('xzoom :>> ', $('.xzoom .img'))
+            $('.xzoom .img').xzoom({
+                zoomWidth: 400,
+                thumbType: 'click',
+                title: true,
+                tint: '#333',
+                Xoffset: 15,
+            })
+            //     isTouchSupported = 'ontouchstart' in window
+
+            //     // $('.img').css({ transform: rotate('90deg') })
+
+            //     if (isTouchSupported) {
+            //         var xzoom1 = $(this).data('img')
+            //         xzoom1.eventunbind()
+            //     }
+        }
+    </script>
+</html>
