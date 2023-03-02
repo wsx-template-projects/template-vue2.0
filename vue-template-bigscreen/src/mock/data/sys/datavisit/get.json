@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "vid": "data_vid",
+    "note": "data_note",
+    "mcdvgRid": "data_mcdvgRid",
+    "isDefault": "data_isDefault",
+    "isValid": "data_isValid",
+    "name": "data_name",
+    "mcdvgName": "data_mcdvgName",
+    "subsystem": "data_subsystem",
+    "updateTime": "2019-12-31 00:00:00",
+    "subsystemName": "data_subsystemName"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

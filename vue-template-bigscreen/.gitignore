@@ -1,0 +1,29 @@
+.DS_Store
+node_modules
+/doc
+/dist
+/dist-zip
+dist.zip
+/zql-ylzqr
+zql-ylzqr.zip
+/TODO.local.md
+src/entry/jm
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

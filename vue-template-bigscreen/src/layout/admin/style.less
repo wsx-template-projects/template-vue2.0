@@ -1,0 +1,222 @@
+#app {
+    .main-container {
+        padding-top: 10px;
+        position: relative;
+        height: calc(100% - @appbar-height);
+        margin-left: @sideBarWidth;
+        background-color: #f0f2f5;
+        -webkit-transition: margin-left 0.28s;
+        transition: margin-left 0.28s;
+    }
+    .sidebar-container {
+        // height: 100%;
+        position: fixed;
+
+        top: @appbar-height;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        width: @sideBarWidth;
+
+        color: #fff;
+        background-color: rgb(38, 64, 104);
+        -webkit-transition: width 0.28s;
+        transition: width 0.28s;
+
+        // reset element-ui css
+        .horizontal-collapse-transition {
+            transition: 0s width ease-in-out, 0s padding-left ease-in-out,
+                0s padding-right ease-in-out;
+        }
+
+        .scrollbar-wrapper {
+            overflow-x: hidden !important;
+        }
+
+        .el-scrollbar__bar.is-vertical {
+            right: 0px;
+        }
+
+        .el-scrollbar {
+            height: calc(100% - 40px);
+        }
+        .is-horizontal {
+            display: none;
+        }
+        a {
+            // display: inline-block;
+            width: 100%;
+            overflow: hidden;
+        }
+        .el-menu {
+            width: 100% !important;
+            height: 100%;
+            border: none;
+        }
+        .submenu-external {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+    .hideSidebar {
+        .sidebar-container {
+            width: 54px !important;
+        }
+
+        .main-container {
+            margin-left: 54px;
+        }
+        .submenu-title-noDropdown {
+            position: relative;
+            padding: 0 !important;
+
+            .el-tooltip {
+                padding: 0 !important;
+
+                .svg-icon {
+                    margin-left: 20px;
+                }
+
+                .sub-el-icon {
+                    margin-left: 19px;
+                }
+            }
+        }
+
+        .el-submenu {
+            overflow: hidden;
+
+            & > .el-submenu__title {
+                padding: 0 !important;
+
+                .svg-icon {
+                    margin-left: 20px;
+                }
+
+                .sub-el-icon {
+                    margin-left: 19px;
+                }
+                span {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+                .el-submenu__icon-arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+    .el-scrollbar__wrap {
+        overflow-y: auto;
+    }
+}
+
+.app-wrapper {
+    height: 100%;
+    .app-navbar {
+        position: relative;
+        z-index: 101;
+        height: @appbar-height;
+        color: #fff;
+        background-color: @primary-color;
+        .app-container {
+            display: flex;
+            height: 100%;
+            padding: 0 20px;
+            align-items: center;
+        }
+        .app-logo {
+            width: 24px;
+            height: 24px;
+            background: url(https://cn.vuejs.org/images/logo.png) no-repeat;
+            background-size: cover;
+            margin-right: 10px;
+        }
+        .app-title {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .app-menu {
+            flex: 1;
+        }
+        .app-user {
+            .name {
+                margin-right: 7px;
+                line-height: @appbar-height;
+                color: #fff;
+                cursor: pointer;
+            }
+            .icon-user {
+                margin-right: 7px;
+                font-size: 18px;
+                vertical-align: middle;
+            }
+            .el-icon--right {
+                color: #fff;
+            }
+        }
+    }
+    .app-sidebar {
+        .el-menu {
+            border-right: none;
+
+            .el-submenu.is-active > .el-submenu__title,
+            .el-menu-item.is-active {
+                color: #fff !important;
+                background-color: @primary-color !important;
+            }
+            .el-submenu__title i {
+                color: #fff !important;
+            }
+
+            .el-submenu.is-active .el-menu-item.is-active {
+                color: #fff !important;
+                background-color: transparent !important;
+            }
+            .el-submenu .el-menu-item:before {
+                display: inline-block;
+                width: 2px;
+                height: 12px;
+                margin-right: 15px;
+                line-height: 1;
+                vertical-align: middle;
+                background-color: transparent;
+                content: ' ';
+            }
+            .el-submenu.is-active .el-menu-item.is-active:before {
+                background-color: @primary-color;
+            }
+
+            .sub-el-icon,
+            .sub-svg-icon {
+                margin-right: 15px;
+                font-size: 14px;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+
+        .sidebar-fold-wrapper {
+            display: flex;
+            height: 40px;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .app-main {
+        height: calc(100% - 70px);
+        padding: 0 20px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

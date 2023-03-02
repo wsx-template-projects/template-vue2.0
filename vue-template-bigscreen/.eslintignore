@@ -1,0 +1,12 @@
+/dist
+/public/libs
+/src/libs
+/docs/*.html
+src/sharegood-ui/src/components
+src/sharegood-ui/src/utils
+src/sharegood-ui/src/http
+src/sharegood-ui/packages
+src/entry/jm
+*.html
+**/services
+src/mock/data

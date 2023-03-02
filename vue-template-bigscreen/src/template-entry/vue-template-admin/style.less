@@ -1,0 +1,120 @@
+.sg-theme(
+    //头部背景色
+    @appbar-bg:#001a9f,
+    //头部字体颜色
+    @appbar-color:#ffffff,
+    //侧边导航栏背景色
+    @sidebar-bg:#ffffff,
+    //侧边导航栏折叠栏 显示：flex 隐藏：none
+    @sidebar-fold-wrap:none,
+    //侧边菜单栏背景色
+    @menubar-bg-default:#ffffff,
+    //侧边菜单栏选中的背景色
+    @menubar-bg-active:#E9EEFB,
+    //侧边菜单栏字体颜色
+    @menubar-color-default:#404956,
+    //侧边菜单栏选中的字体颜色
+    @menubar-color-active:#158dff) {
+    #app.theme-light {
+        .app-logo {
+            width: 314px;
+            height: 24px;
+            background-image: url(~@/assets/logo.png);
+        }
+
+        .app-wrapper
+            .app-sidebar
+            .el-menu
+            .nest-menu
+            > .el-submenu
+            > .el-submenu__title {
+            background: #eee !important;
+        }
+        .app-wrapper .app-sidebar .el-menu .submenu-title-noDropdown {
+            background: #fff !important;
+        }
+        .app-wrapper .app-sidebar .el-menu .el-submenu > .el-submenu__title {
+            background: #fff !important;
+        }
+        .app-wrapper {
+            .el-scrollbar {
+                height: 100% !important;
+            }
+            .app-navbar {
+                color: @appbar-color;
+                background-color: @appbar-bg;
+                .app-user {
+                    .name {
+                        color: @appbar-color;
+                    }
+                    .el-icon--right {
+                        color: @appbar-color;
+                    }
+                }
+            }
+            .sidebar-container.app-sidebar {
+                background-color: @sidebar-bg;
+                box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+
+                .el-submenu .el-menu-item:before {
+                    display: none !important;
+                }
+                .sidebar-fold-wrapper {
+                    position: absolute;
+                    width: 8px;
+                    height: 70px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    right: -8px;
+                    top: 50%;
+                    margin-top: -35px;
+                    border-radius: 0px 3px 3px 0px;
+                    .sidebar-fold-icon {
+                        font-family: Arial !important;
+                        color: @menubar-color-default;
+                        width: 0;
+                        height: 0;
+                        border-top: 4px solid transparent;
+                        border-right: 6px solid #fff;
+                        border-bottom: 4px solid transparent;
+                        text-align: center;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    &.collapsed {
+                        .sidebar-fold-icon {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .el-menu-item,
+                .el-submenu__title {
+                    color: @menubar-color-default !important;
+                    background-color: @menubar-bg-default;
+                    .iconfont,
+                    .el-submenu__icon-arrow {
+                        color: @menubar-color-default !important;
+                    }
+                    i {
+                        color: #999 !important;
+                    }
+                }
+                .el-menu-item.is-active {
+                    color: #fff !important;
+                    background-color: #2064ef !important;
+                    .iconfont,
+                    .el-submenu__icon-arrow {
+                        color: @menubar-color-active !important;
+                    }
+                    &::before {
+                        background-color: @menubar-color-active;
+                    }
+                }
+            }
+        }
+    }
+}
+.sg-theme();
+.a {
+    color: #1c2f4d;
+}

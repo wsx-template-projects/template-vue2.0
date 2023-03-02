@@ -1,0 +1,29 @@
+{{#if template}}
+<template>
+    <div class="{{ pathToName name }}">{{ properCase name }}</div>
+</template>
+{{/if}}
+
+{{#if script}}
+<script>
+export default {
+    name: '{{ properCase name }}',
+    components: {},
+    props: {},
+    data() {
+        return {}
+    },
+    created() {},
+    mounted() {},
+    methods: {},
+}
+</script>
+{{/if}}
+
+{{#if style}}
+<style lang="less">
+.{{pathToName name}} {
+    
+}
+</style>
+{{/if}}

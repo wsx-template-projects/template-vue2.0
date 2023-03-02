@@ -1,0 +1,36 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "note": "data_note",
+    "additionalJson": "data_additionalJson",
+    "subsystem": "data_subsystem",
+    "mcr8Rid": "data_mcr8Rid",
+    "sort": 0,
+    "type": "data_type",
+    "mcr8Name": "data_mcr8Name",
+    "grouping": "data_grouping",
+    "url": "http://test.com/data_url",
+    "vid": "data_vid",
+    "createTime": "2019-12-31 00:00:00",
+    "name": "data_name",
+    "menuResourceType": "data_menuResourceType",
+    "mcmVidParentName": "data_mcmVidParentName",
+    "mcmRidParent": "data_mcmRidParent",
+    "mcfRid": "data_mcfRid"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

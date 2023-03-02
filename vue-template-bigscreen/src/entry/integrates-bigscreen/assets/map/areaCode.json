@@ -1,0 +1,667 @@
+[
+  {
+    "value": "省级",
+    "code": "330000",
+    "areacode": "3300"
+  },
+  {
+    "value": "杭州市",
+    "code": "330100",
+    "areacode": "3301"
+  },
+  {
+    "value": "上城区",
+    "code": "330102",
+    "areacode": "3301"
+  },
+  {
+    "value": "拱墅区",
+    "code": "330105",
+    "areacode": "3301"
+  },
+  {
+    "value": "西湖区",
+    "code": "330106",
+    "areacode": "3301"
+  },
+  {
+    "value": "滨江区",
+    "code": "330108",
+    "areacode": "3301"
+  },
+  {
+    "value": "临平区",
+    "code": "330113",
+    "areacode": "3301"
+  },
+  {
+    "value": "桐庐县",
+    "code": "330122",
+    "areacode": "3301"
+  },
+  {
+    "value": "淳安县",
+    "code": "330127",
+    "areacode": "3301"
+  },
+  {
+    "value": "钱塘区",
+    "code": "330155",
+    "areacode": "3301"
+  },
+  {
+    "value": "萧山区",
+    "code": "330181",
+    "areacode": "3301"
+  },
+  {
+    "value": "建德市",
+    "code": "330182",
+    "areacode": "3301"
+  },
+  {
+    "value": "富阳区",
+    "code": "330183",
+    "areacode": "3301"
+  },
+  {
+    "value": "余杭区",
+    "code": "330184",
+    "areacode": "3301"
+  },
+  {
+    "value": "临安区",
+    "code": "330185",
+    "areacode": "3301"
+  },
+  {
+    "value": "西湖风景名胜区",
+    "code": "330194",
+    "areacode": "3301"
+  },
+  {
+    "value": "宁波市",
+    "code": "330200",
+    "areacode": "3302"
+  },
+  {
+    "value": "海曙区",
+    "code": "330203",
+    "areacode": "3302"
+  },
+  {
+    "value": "江东区",
+    "code": "330204",
+    "areacode": "3302"
+  },
+  {
+    "value": "江北区",
+    "code": "330205",
+    "areacode": "3302"
+  },
+  {
+    "value": "北仑区",
+    "code": "330206",
+    "areacode": "3302"
+  },
+  {
+    "value": "镇海区",
+    "code": "330211",
+    "areacode": "3302"
+  },
+  {
+    "value": "大榭区",
+    "code": "330212",
+    "areacode": "3302"
+  },
+  {
+    "value": "保税区",
+    "code": "330214",
+    "areacode": "3302"
+  },
+  {
+    "value": "宁波国家高新区",
+    "code": "330215",
+    "areacode": "3302"
+  },
+  {
+    "value": "杭州湾新区",
+    "code": "330218",
+    "areacode": "3302"
+  },
+  {
+    "value": "象山县",
+    "code": "330225",
+    "areacode": "3302"
+  },
+  {
+    "value": "宁海县",
+    "code": "330226",
+    "areacode": "3302"
+  },
+  {
+    "value": "鄞州区",
+    "code": "330227",
+    "areacode": "3302"
+  },
+  {
+    "value": "东钱湖旅游度假区",
+    "code": "330229",
+    "areacode": "3302"
+  },
+  {
+    "value": "石化经济技术开发区",
+    "code": "330231",
+    "areacode": "3302"
+  },
+  {
+    "value": "余姚市",
+    "code": "330281",
+    "areacode": "3302"
+  },
+  {
+    "value": "慈溪市",
+    "code": "330282",
+    "areacode": "3302"
+  },
+  {
+    "value": "奉化区",
+    "code": "330283",
+    "areacode": "3302"
+  },
+  {
+    "value": "宁波港",
+    "code": "330290",
+    "areacode": "3302"
+  },
+  {
+    "value": "梅山保税港区",
+    "code": "330291",
+    "areacode": "3302"
+  },
+  {
+    "value": "温州市",
+    "code": "330300",
+    "areacode": "3303"
+  },
+  {
+    "value": "鹿城区",
+    "code": "330302",
+    "areacode": "3303"
+  },
+  {
+    "value": "龙湾区",
+    "code": "330303",
+    "areacode": "3303"
+  },
+  {
+    "value": "瓯海区",
+    "code": "330304",
+    "areacode": "3303"
+  },
+  {
+    "value": "温州市经开区",
+    "code": "330305",
+    "areacode": "3303"
+  },
+  {
+    "value": "瓯江口",
+    "code": "330307",
+    "areacode": "3303"
+  },
+  {
+    "value": "洞头区",
+    "code": "330322",
+    "areacode": "3303"
+  },
+  {
+    "value": "永嘉县",
+    "code": "330324",
+    "areacode": "3303"
+  },
+  {
+    "value": "平阳县",
+    "code": "330326",
+    "areacode": "3303"
+  },
+  {
+    "value": "苍南县",
+    "code": "330327",
+    "areacode": "3303"
+  },
+  {
+    "value": "文成县",
+    "code": "330328",
+    "areacode": "3303"
+  },
+  {
+    "value": "泰顺县",
+    "code": "330329",
+    "areacode": "3303"
+  },
+  {
+    "value": "生态园",
+    "code": "330332",
+    "areacode": "3303"
+  },
+  {
+    "value": "瑞安市",
+    "code": "330381",
+    "areacode": "3303"
+  },
+  {
+    "value": "乐清市",
+    "code": "330382",
+    "areacode": "3303"
+  },
+  {
+    "value": "龙港市",
+    "code": "330383",
+    "areacode": "3303"
+  },
+  {
+    "value": "嘉兴市",
+    "code": "330400",
+    "areacode": "3304"
+  },
+  {
+    "value": "南湖区",
+    "code": "330402",
+    "areacode": "3304"
+  },
+  {
+    "value": "经济技术开发区（国际商务区）",
+    "code": "330403",
+    "areacode": "3304"
+  },
+  {
+    "value": "嘉兴港区",
+    "code": "330405",
+    "areacode": "3304"
+  },
+  {
+    "value": "秀洲区",
+    "code": "330411",
+    "areacode": "3304"
+  },
+  {
+    "value": "嘉善县",
+    "code": "330421",
+    "areacode": "3304"
+  },
+  {
+    "value": "海盐县",
+    "code": "330424",
+    "areacode": "3304"
+  },
+  {
+    "value": "海宁市",
+    "code": "330481",
+    "areacode": "3304"
+  },
+  {
+    "value": "平湖市",
+    "code": "330482",
+    "areacode": "3304"
+  },
+  {
+    "value": "桐乡市",
+    "code": "330483",
+    "areacode": "3304"
+  },
+  {
+    "value": "湖州市",
+    "code": "330500",
+    "areacode": "3305"
+  },
+  {
+    "value": "吴兴区",
+    "code": "330503",
+    "areacode": "3305"
+  },
+  {
+    "value": "南浔区",
+    "code": "330504",
+    "areacode": "3305"
+  },
+  {
+    "value": "德清县",
+    "code": "330521",
+    "areacode": "3305"
+  },
+  {
+    "value": "长兴县",
+    "code": "330522",
+    "areacode": "3305"
+  },
+  {
+    "value": "安吉县",
+    "code": "330523",
+    "areacode": "3305"
+  },
+  {
+    "value": "南太湖新区",
+    "code": "330524",
+    "areacode": "3305"
+  },
+  {
+    "value": "绍兴市",
+    "code": "330600",
+    "areacode": "3306"
+  },
+  {
+    "value": "越城区",
+    "code": "330602",
+    "areacode": "3306"
+  },
+  {
+    "value": "滨海新城",
+    "code": "330608",
+    "areacode": "3306"
+  },
+  {
+    "value": "柯桥区",
+    "code": "330621",
+    "areacode": "3306"
+  },
+  {
+    "value": "新昌县",
+    "code": "330624",
+    "areacode": "3306"
+  },
+  {
+    "value": "诸暨市",
+    "code": "330681",
+    "areacode": "3306"
+  },
+  {
+    "value": "上虞区",
+    "code": "330682",
+    "areacode": "3306"
+  },
+  {
+    "value": "嵊州市",
+    "code": "330683",
+    "areacode": "3306"
+  },
+  {
+    "value": "金华市",
+    "code": "330700",
+    "areacode": "3307"
+  },
+  {
+    "value": "婺城区",
+    "code": "330702",
+    "areacode": "3307"
+  },
+  {
+    "value": "金华经济技术开发区",
+    "code": "330703",
+    "areacode": "3307"
+  },
+  {
+    "value": "金华山旅游经济区",
+    "code": "330705",
+    "areacode": "3307"
+  },
+  {
+    "value": "金东区",
+    "code": "330721",
+    "areacode": "3307"
+  },
+  {
+    "value": "武义县",
+    "code": "330723",
+    "areacode": "3307"
+  },
+  {
+    "value": "浦江县",
+    "code": "330726",
+    "areacode": "3307"
+  },
+  {
+    "value": "磐安县",
+    "code": "330727",
+    "areacode": "3307"
+  },
+  {
+    "value": "金义都市新区",
+    "code": "330730",
+    "areacode": "3307"
+  },
+  {
+    "value": "兰溪市",
+    "code": "330781",
+    "areacode": "3307"
+  },
+  {
+    "value": "义乌市",
+    "code": "330782",
+    "areacode": "3307"
+  },
+  {
+    "value": "东阳市",
+    "code": "330783",
+    "areacode": "3307"
+  },
+  {
+    "value": "永康市",
+    "code": "330784",
+    "areacode": "3307"
+  },
+  {
+    "value": "衢州市",
+    "code": "330800",
+    "areacode": "3308"
+  },
+  {
+    "value": "柯城区",
+    "code": "330802",
+    "areacode": "3308"
+  },
+  {
+    "value": "衢州绿色产业集聚区",
+    "code": "330819",
+    "areacode": "3308"
+  },
+  {
+    "value": "衢江区",
+    "code": "330821",
+    "areacode": "3308"
+  },
+  {
+    "value": "常山县",
+    "code": "330822",
+    "areacode": "3308"
+  },
+  {
+    "value": "开化县",
+    "code": "330824",
+    "areacode": "3308"
+  },
+  {
+    "value": "龙游县",
+    "code": "330825",
+    "areacode": "3308"
+  },
+  {
+    "value": "经济开发区",
+    "code": "330826",
+    "areacode": "3308"
+  },
+  {
+    "value": "柯山区",
+    "code": "330827",
+    "areacode": "3308"
+  },
+  {
+    "value": "江山市",
+    "code": "330881",
+    "areacode": "3308"
+  },
+  {
+    "value": "舟山市",
+    "code": "330900",
+    "areacode": "3309"
+  },
+  {
+    "value": "定海区",
+    "code": "330902",
+    "areacode": "3309"
+  },
+  {
+    "value": "普陀区",
+    "code": "330903",
+    "areacode": "3309"
+  },
+  {
+    "value": "普陀山朱家尖",
+    "code": "330905",
+    "areacode": "3309"
+  },
+  {
+    "value": "新城",
+    "code": "330906",
+    "areacode": "3309"
+  },
+  {
+    "value": "金塘",
+    "code": "330907",
+    "areacode": "3309"
+  },
+  {
+    "value": "六横",
+    "code": "330908",
+    "areacode": "3309"
+  },
+  {
+    "value": "海洋产业集聚区",
+    "code": "330909",
+    "areacode": "3309"
+  },
+  {
+    "value": "岱山县",
+    "code": "330921",
+    "areacode": "3309"
+  },
+  {
+    "value": "嵊泗县",
+    "code": "330922",
+    "areacode": "3309"
+  },
+  {
+    "value": "洋山",
+    "code": "330935",
+    "areacode": "3309"
+  },
+  {
+    "value": "台州市",
+    "code": "331000",
+    "areacode": "3310"
+  },
+  {
+    "value": "椒江区",
+    "code": "331002",
+    "areacode": "3310"
+  },
+  {
+    "value": "黄岩区",
+    "code": "331003",
+    "areacode": "3310"
+  },
+  {
+    "value": "路桥区",
+    "code": "331004",
+    "areacode": "3310"
+  },
+  {
+    "value": "台州集聚区",
+    "code": "331005",
+    "areacode": "3310"
+  },
+  {
+    "value": "玉环市",
+    "code": "331021",
+    "areacode": "3310"
+  },
+  {
+    "value": "三门县",
+    "code": "331022",
+    "areacode": "3310"
+  },
+  {
+    "value": "天台县",
+    "code": "331023",
+    "areacode": "3310"
+  },
+  {
+    "value": "仙居县",
+    "code": "331024",
+    "areacode": "3310"
+  },
+  {
+    "value": "温岭市",
+    "code": "331081",
+    "areacode": "3310"
+  },
+  {
+    "value": "临海市",
+    "code": "331082",
+    "areacode": "3310"
+  },
+  {
+    "value": "丽水市",
+    "code": "332500",
+    "areacode": "3325"
+  },
+  {
+    "value": "莲都区",
+    "code": "332501",
+    "areacode": "3325"
+  },
+  {
+    "value": "龙泉市",
+    "code": "332502",
+    "areacode": "3325"
+  },
+  {
+    "value": "经济开发区",
+    "code": "332505",
+    "areacode": "3325"
+  },
+  {
+    "value": "青田县",
+    "code": "332522",
+    "areacode": "3325"
+  },
+  {
+    "value": "云和县",
+    "code": "332523",
+    "areacode": "3325"
+  },
+  {
+    "value": "庆元县",
+    "code": "332525",
+    "areacode": "3325"
+  },
+  {
+    "value": "缙云县",
+    "code": "332526",
+    "areacode": "3325"
+  },
+  {
+    "value": "遂昌县",
+    "code": "332527",
+    "areacode": "3325"
+  },
+  {
+    "value": "松阳县",
+    "code": "332528",
+    "areacode": "3325"
+  },
+  {
+    "value": "景宁县",
+    "code": "332529",
+    "areacode": "3325"
+  }
+]

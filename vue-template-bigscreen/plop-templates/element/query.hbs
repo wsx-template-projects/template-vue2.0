@@ -1,0 +1,149 @@
+<template>
+    <div class="sg-page ">
+        <el-card class="box-card">
+            <div slot="header">
+                <span>{{ $route.meta.title }}</span>
+            </div>
+            <sg-base-form
+                class="sg-m-b-15"
+                ref="formRef"
+                :fields="FormView.fields"
+                v-model="FormView.model"
+                @submit="onSubmit"
+                :span="8"
+            >
+            </sg-base-form>
+            <sg-data-view
+                :columns="TableView.columns"
+                :load="TableView.load"
+                ref="table"
+            >
+            </sg-data-view>
+        </el-card>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'SystemAdminFinanceSettings',
+    components: {},
+    props: {},
+    data() {
+        return {
+            FormView: {
+                model: {},
+                fields: [
+                    {
+                        tag: 'input',
+                        name: '参数名称',
+                        itemAttrs: {
+                            label: '参数名称',
+                        },
+                        attrs: {
+                            placeholder: '请输入',
+                        },
+                    },
+                    {
+                        tag: 'action',
+                        buttons: [
+                            {
+                                isSubmit: true,
+                                type: 'primary',
+                                text: '查询',
+                            },
+                            {
+                                isReset: true,
+                                text: '重置',
+                            },
+                        ],
+                    },
+                ],
+            },
+            TableView: {
+                load: params => {
+                    let query = { ...this.FormView.model }
+                    params = {
+                        ...params,
+                        ...query,
+                    }
+
+                    return this.syncData(params)
+                },
+                columns: [
+                    // {
+                    //     label: '全选',
+                    //     type: 'selection',
+                    // },
+                    {
+                        label: '序号',
+                        type: 'index',
+                    },
+                    {
+                        label: '参数名称',
+                        prop: '参数名称',
+                    },
+                    {
+                        label: '参数描述',
+                        prop: '参数描述',
+                    },
+                    {
+                        label: '参数标识',
+                        prop: '参数标识',
+                    },
+                    {
+                        label: '参数值',
+                        prop: '参数值',
+                    },
+                    {
+                        label: '最近修改时间',
+                        prop: '最近修改时间',
+                    },
+                    {
+                        label: '操作',
+                        prop: 'action',
+                        width: '150px',
+                        render: (h, { row }) => {
+                            return [
+                                h(
+                                    'el-button',
+                                    {
+                                        props: {
+                                            type: 'text',
+                                        },
+                                        on: {
+                                            click: () => {
+                                                this.handleUpdate(row)
+                                            },
+                                        },
+                                    },
+                                    '修改',
+                                ),
+                            ]
+                        },
+                    },
+                ],
+            },
+        }
+    },
+    computed: {},
+    watch: {},
+    created() {},
+    mounted() {},
+    methods: {
+        onSubmit() {},
+        syncData() {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve({
+                        result: [{}, {}],
+                        total: 120,
+                    })
+                }, 1000)
+            })
+        },
+        handleUpdate(row) {},
+    },
+}
+</script>
+
+<style lang="less" module></style>
