@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @page {
+            size: 210mm 297mm;
+        }
+
+        body {
+            font-family: NSimSun;
+        }
+
+        h2 {
+            line-height: 50px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+            border-spacing: 0;
+            border-bottom: 1px solid #2b2b2b;
+            font-size: 12px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-right: 1px solid #2b2b2b;
+            border-top: 1px solid #2b2b2b;
+        }
+        .color-eee {
+            background-color: #eee;
+            text-align: center;
+        }
+        .left-border {
+            border-left: 1px solid #2b2b2b;
+        }
+        .no-border {
+            padding: 0;
+            height: 26px;
+            border: 0;
+        }
+        #table2 {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<h2>宁波市水路客运船舶航班时刻表</h2>
+<table style="border-bottom: 0">
+    <tr>
+        <td class="no-border" style="width: 50%"></td>
+        <td class="no-border" style="width: 30%"></td>
+        <td class="no-border" style="width: 20%">表号：</td>
+    </tr>
+    <tr>
+        <td class="no-border"></td>
+        <td class="no-border"></td>
+        <td class="no-border">制定机关：</td>
+    </tr>
+    <tr>
+        <td class="no-border">统一社会信用代码：${authUser.entUser.uniCode!''}</td>
+        <td class="no-border"></td>
+        <td class="no-border">批准机关：</td>
+    </tr>
+    <tr>
+        <td class="no-border">
+            尚未领取统一社会信用代码的填写原组织机构代码：
+        </td>
+        <td class="no-border"></td>
+        <td class="no-border">批准文号：</td>
+    </tr>
+    <tr>
+        <td class="no-border">单位详细名称：${authUser.username!''}</td>
+        <td class="no-border">${rep.updateTime?string('yyyy年MM月dd日')!''}</td>
+        <td class="no-border">有效期至：</td>
+    </tr>
+</table>
+
+<table id="table">
+    <tr>
+        <td class="color-eee left-border" rowspan="2" style="width: 114px">
+            客运企业名称
+        </td>
+        <td rowspan="2" style="width: 185px">${authUser.username!''}</td>
+        <td class="color-eee" style="width: 114px">咨询热线</td>
+        <td style="width: 185px">${consultationLine!''}</td>
+    </tr>
+    <tr>
+        <td class="color-eee" style="width: 114px">监督电话</td>
+        <td>${complaintTel!''}</td>
+    </tr>
+    <tr>
+        <td class="color-eee left-border">航线名称</td>
+        <td>${rep.routeName!''}</td>
+        <td class="color-eee">票价</td>
+        <td>${rep.ticketPrice!''}元/人</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="color-eee left-border">航线时刻表</td>
+    </tr>
+    <tr>
+        <td class="color-eee left-border">早班时间</td>
+        <td>${rep.morningTime!''}</td>
+        <td class="color-eee">晚班时间</td>
+        <td>${rep.nightTime!''}</td>
+    </tr>
+    <tr>
+        <td colspan="2" class="color-eee left-border">${rep.departureStartFirst!''}</td>
+        <td colspan="2" class="color-eee">${rep.departureStartSecond!''}</td>
+    </tr>
+    <#list time as time>
+    <tr>
+        <td class="color-eee left-border">第${time_index+1!''}班</td>
+        <td>${time.morningTime!''}</td>
+        <td class="color-eee">第${time_index+1!''}班</td>
+        <td>${time.nightTime!''}</td>
+    </tr>
+    </#list >
+    <tr>
+        <td class="color-eee left-border">其他说明</td>
+        <td colspan="3">${rep.remarks!''}</td>
+    </tr>
+</table>
+<table id="table2">
+    <tbody>
+    <tr>
+        <td class="no-border">单位负责人：${unitHead!''}</td>
+        <td class="no-border">统计负责人：${statisticsHead!''}</td>
+        <td class="no-border">填表人：${chartist!''}</td>
+        <td class="no-border"></td>
+        <td class="no-border"></td>
+        <td class="no-border">联系电话：${tel!''}</td>
+        <td class="no-border">报出日期：${reportTime!''}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

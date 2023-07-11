@@ -1,0 +1,329 @@
+@using JinFan; @using JinFan.Web; @using JinFan.Web.Tray; @addTagHelper *,
+Microsoft.AspNetCore.Mvc.TagHelpers @model TrayBindModel @{ ViewBag.Title =
+LR.Binding; Layout = MVC.Layout; }
+
+<style>
+    .el-table {
+        display: inline-block;
+        margin: 30px 2%;
+        vertical-align: top;
+    }
+
+    .el-table td.el-table__cell {
+        padding: 5px 0;
+    }
+
+    .el-table td .cell {
+        padding-left: 30px !important;
+        padding-right: 30px;
+    }
+
+    .el-table th.el-table__cell.is-leaf {
+        background: #fafafa;
+        color: #6d6d6d;
+    }
+</style>
+
+<div class="bg_white">
+    <div id="app">
+        <div style="width: 97%; margin: 20px auto">
+            @*<label>当前托盘条码：</label>
+            <input
+                type="text"
+                disabled
+                class="form-control"
+                id="trayCode"
+                style="width: 200px; display: inline-block; margin-right: 20px"
+            />
+            <input
+                type="text"
+                placeholder="请输入条形码"
+                onkeyup="value=value.replace(/\s/g,'')"
+                class="form-control"
+                id="code_input"
+                style="width: 300px; display: inline-block; margin-right: 20px"
+            />
+            <input
+                type="button"
+                value="保存"
+                class="btn btn-primary btn-sm"
+                id="submit"
+                v-on:click="submit"
+            />*@
+            <el-form :inline="true" :model="trayForm" class="demo-form-inline">
+                <el-form-item label="当前托盘条码">
+                    <el-input
+                        v-model="trayForm.codeCopy"
+                        disabled
+                        placeholder="当前托盘条码"
+                    ></el-input>
+                </el-form-item>
+                <el-form-item label="条形码">
+                    <el-input
+                        v-model="trayForm.code"
+                        placeholder="条形码"
+                        id="codeName"
+                        v-on:keyup.enter.native="tray"
+                    ></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" v-on:click="submit"
+                        >保存</el-button
+                    >
+                </el-form-item>
+            </el-form>
+        </div>
+        <div class="tray_con text-center" v-show="trayTable">
+            <el-table :data="tableData" stripe border style="width: 45%">
+                <el-table-column
+                    align="center"
+                    prop="id"
+                    width="200px"
+                    label="通道号"
+                >
+                </el-table-column>
+                <el-table-column prop="code" align="center" label="电芯条码">
+                    <template slot-scope="scope">
+                        <el-input
+                            :ref="scope.row.id"
+                            autocomplete="off"
+                            v-model="scope.row.code"
+                            type="text"
+                            clearable
+                            palceholder="请输入电芯条码"
+                            v-on:focus="selectContent($event)"
+                            v-on:keydown.native="validateCounts(scope.row,scope.$index, $event)"
+                        />
+                    </template>
+                </el-table-column>
+            </el-table>
+            <el-table :data="tableData1" stripe border style="width: 45%">
+                <el-table-column
+                    align="center"
+                    prop="id"
+                    width="200px"
+                    label="通道号"
+                >
+                </el-table-column>
+                <el-table-column prop="code" align="center" label="电芯条码">
+                    <template slot-scope="scope">
+                        <el-input
+                            :ref="scope.row.id"
+                            autocomplete="off"
+                            v-model="scope.row.code"
+                            type="text"
+                            clearable
+                            palceholder="请输入电芯条码"
+                            v-on:focus="selectContent($event)"
+                            v-on:keydown.native="validateCounts1(scope.row,scope.$index, $event)"
+                        />
+                    </template>
+                </el-table-column>
+            </el-table>
+        </div>
+    </div>
+</div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            trayForm: {
+                code: '',
+                codeCopy: '',
+            },
+            trayTable: false,
+            tableData: [
+                /* {id:"1",code:''},
+				 {id:"2",code:''},
+				 {id:"3",code:''},*/
+            ],
+            tableData1: [],
+        },
+        created() {},
+        mounted() {
+            this.codeNameRef()
+        },
+        methods: {
+            codeNameRef() {
+                this.$nextTick(() => {
+                    var codeName = document.getElementById('codeName')
+                    codeName.focus()
+                })
+            },
+            selectContent(e) {
+                e.currentTarget.select()
+            },
+            validateCounts(row, index, e) {
+                const val = e.target.value
+                var keyCode = e.keyCode || e.which || e.charCode
+                if (keyCode === 13) {
+                    //this.submitYearLeiJi(row.id, val)
+                    //console.log('tableData>>>:', this.tableData)
+                    //console.log('length>>>:', Object.keys(this.$refs).length)
+                    console.log('rowCode:>>>>', row.code)
+                    /*const map = new Map()
+					const qc = this.tableData.filter(key => !map.has(key.code) && map.set(key.code, 1)) // 这里对name属性进行去重
+					console.log('qc')
+					console.log(qc)*/
+                    for (let i = 0; i < this.tableData.length; i++) {
+                        console.log(i, ':')
+                        console.log(this.tableData[i].code)
+                        if (row.code === this.tableData[i].code) {
+                            row.id = i + 1
+                            console.log('rowId', row.id)
+                            this.$refs[row.id].blur()
+                            this.$refs[row.id + 1].focus()
+                        } else {
+                            this.$refs[row.id].blur()
+                            this.$refs[row.id + 1].focus()
+                        }
+                    }
+                    //this.$refs[row.id].blur()
+                    //this.$refs[row.id + 1].focus()
+                }
+            },
+            validateCounts1(row, index, e) {
+                var keyCode = e.keyCode || e.which || e.charCode
+                if (keyCode === 13) {
+                    this.$refs[row.id].blur()
+                    console.log('length>>>:', Object.keys(this.$refs).length)
+                    console.log('index>>>:', index)
+                    console.log('id>>>:', row.id)
+                    if (Object.keys(this.$refs).length === row.id) {
+                        this.$nextTick(() => {
+                            this.submit()
+                            this.$refs[this.tableData[0].id] &&
+                                this.$refs[this.tableData[0].id].focus() // 聚焦操作代码
+                        })
+                    } else {
+                        this.$refs[row.id + 1].focus()
+                    }
+                }
+            },
+            isInteger(n) {
+                return parseInt(n) == parseFloat(n) //是否为整数
+            },
+            tray() {
+                axios
+                    // .post('/tray/tray/unbindtray?barcode=' + this.barcode, JSON.stringify(params))
+                    .get('/tray/tray/gettray?barcode=' + this.trayForm.code)
+                    .then((res) => {
+                        if (res.data.success) {
+                            this.trayTable = true
+                            this.trayForm.codeCopy = this.trayForm.code
+                            let length = res.data.data.ChannelCount / 2
+                            /*console.log('整数:>>>', this.isInteger(length))
+							console.log('length:>>>', length)
+							console.log('整数length:>>>', Math.round(length));*/
+                            let length1 = Math.round(length)
+                            let length2 = length1 - 1
+                            this.tableData = []
+                            this.tableData1 = []
+                            if (this.isInteger(length)) {
+                                for (var i = 0; i < length; i++) {
+                                    var obj = {}
+                                    obj.id = i + 1
+                                    obj.code = ''
+                                    var obj1 = {}
+                                    obj1.id = i + length + 1
+                                    obj1.code = ''
+                                    this.tableData.push(obj)
+                                    this.tableData1.push(obj1)
+                                }
+                            } else {
+                                for (var i = 0; i < length1; i++) {
+                                    var obj = {}
+                                    obj.id = i + 1
+                                    obj.code = ''
+                                    this.tableData.push(obj)
+                                }
+                                for (var i = 0; i < length2; i++) {
+                                    var obj1 = {}
+                                    obj1.id = i + length1 + 1
+                                    obj1.code = ''
+                                    this.tableData1.push(obj1)
+                                }
+                            }
+                            this.$nextTick(() => {
+                                this.$refs[this.tableData[0].id] &&
+                                    this.$refs[this.tableData[0].id].focus() // 聚焦操作代码
+                            })
+                            //console.log('table:>>>', this.tableData)
+                            //console.log('table1:>>>', this.tableData1)
+                        } else {
+                            this.add = false
+                            if (
+                                res.data.result == '@OperationResult.NotLogin'
+                            ) {
+                                this.$alert(
+                                    res.data.resultNative,
+                                    '@LR.Login',
+                                    {
+                                        confirmButtonText: '@LR.OK',
+                                        callback: () => {
+                                            window.location.href =
+                                                '/account/login'
+                                        },
+                                    },
+                                )
+                            } else {
+                                this.$message.error(res.data.resultNative)
+                            }
+                        }
+                    })
+            },
+            submit() {
+                var arr = new Array()
+                let dataList = []
+                dataList = this.tableData.concat(this.tableData1)
+                dataList.forEach(function (ele, index) {
+                    arr[index] = ele.code
+                })
+                axios
+                    .post(
+                        '/tray/tray/SaveBindReturnResutl?trayBarcode=' +
+                            this.trayForm.codeCopy,
+                        JSON.stringify(arr),
+                        {
+                            headers: {
+                                'Content-Type':
+                                    'application/json;charset=UTF-8',
+                            },
+                        },
+                    )
+                    .then((data) => {
+                        if (data.data.success) {
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success',
+                            })
+                            this.trayTable = false
+                            this.trayForm.code = ''
+                            this.trayForm.codeCopy = ''
+                            this.codeNameRef()
+                            //location.reload()
+                        } else {
+                            if (
+                                data.data.result == '@OperationResult.NotLogin'
+                            ) {
+                                this.$alert(
+                                    data.data.resultNative,
+                                    '@LR.Login',
+                                    {
+                                        confirmButtonText: '@LR.OK',
+                                        callback: () => {
+                                            window.location.href =
+                                                '/account/login'
+                                        },
+                                    },
+                                )
+                            } else {
+                                this.$message.error(data.data.resultNative)
+                            }
+                        }
+                    })
+            },
+        },
+    })
+</script>
