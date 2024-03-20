@@ -1,0 +1,18 @@
+{
+    "code": 200,
+    "message": "",
+    "errors": [],
+    "data": {
+        "keywordsPositionList": [
+            {
+                "keyword": null,
+                "llx": null,
+                "lly": null,
+                "pageNo": 1,
+                "sealType": "0",
+                "xCoordinate": 262.02002,
+                "yCoordinate": 488.43
+            }
+        ]
+    }
+}

@@ -1,6 +1,6 @@
-# hx-field-view
+# my-sms-code
 
-field-view组件
+手机验证码
 
 ## 基础属性 - Attrs
 
@@ -25,18 +25,27 @@ field-view组件
 | 名称    |  说明   |
 | ------- | ------ |
 | default | xx    |
+| xx | xx   |
 
 ### 示例
 
-```html
+```bash
 
-<hx-field-view
-    icon="icon-checkNo"
-    label="label"
-    value="value"
-    align="right"
-    :is-bottom-border="false"
-    :is-ellipsis="false"
-></hx-field-view>
+<hx-sms-code
+    class="sms-code"
+    :interval="60"
+    :callback="sendCode"
+/>
+
+async sendCode() {
+    console.log('send code :>> ')
+    const { phone } = this.LoginView.model
+    if (!phone) {
+        return Promise.reject({ message: '请您先输入手机号' })
+    }
+    await this.$http.get('/xxx/xxx', {
+        params: { phone },
+    })
+}
 
 ```

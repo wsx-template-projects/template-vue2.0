@@ -99,7 +99,7 @@ export default class SelectPicker extends Vue {
             value: this.value,
             columns: this.myOptions,
         }
-        const selectedOptions = await this.$moduleLoad(
+        const selectedOptions = await this.$modalDialog(
             () => import('./select-picke-popup.vue'),
             props,
         )

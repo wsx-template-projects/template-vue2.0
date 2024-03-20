@@ -2,6 +2,7 @@
 
 ```bash
 
+移动端业务组件库
 
 ```
 
@@ -16,7 +17,6 @@
 | axios | 0.19.2    |  |
 | vant-ui | 2.12.33    | [文档](https://vant-contrib.gitee.io/vant/v2/#/zh-CN/home) |
 
-
 ### 组件
 
 ```bash
@@ -28,6 +28,20 @@
 # list
 
 # list-page
+
+```
+
+### ui样式处理模块
+
+```bash
+
+# 主题色
+
+# 状态类型
+is-layout is-active is-disabled
+
+# 全局类型
+hx-xxx-xxx
 
 
 ```

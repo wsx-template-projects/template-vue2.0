@@ -1,0 +1,32 @@
+{
+    "code": 200,
+    "message": "",
+    "errors": [],
+    "data": {
+        "createTime": "2024-03-05 15:05:30",
+        "documentName": "fileName2",
+        "isMultiSign": "0",
+        "isPerson": 0,
+        "locateMode": "2",
+        "pdfFileRealWidth": [
+            {
+                "height": 841.92,
+                "page": 1,
+                "width": 595.32
+            }
+        ],
+        "projectName": "浙江汇信科技有限公司-商业签章测试项目",
+        "signInfoList": [],
+        "signInitiator": "测试发起人",
+        "status": "0",
+        "unSignInfoList": [
+            {
+                "documentName": "fileName2",
+                "signId": "d5634214dabe11eea686a4bf01006766",
+                "signedSealTypeList": null
+            }
+        ],
+        "uniscid": "93211737R9PJYTQBRK",
+        "unitName": "浙江省王圣贤测试用企业"
+    }
+}

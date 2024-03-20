@@ -1,3 +1,4 @@
+// 高阶组件模式
 // 智能组件 1.0  - 容器组件
 const withPromise = (wrapped: any, promiseFn: Function) => {
     return {

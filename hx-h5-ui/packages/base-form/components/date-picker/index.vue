@@ -103,7 +103,7 @@ export default class DatePicker extends Vue {
             defaultDate,
             timeSelectList,
         }
-        const date = await this.$moduleLoad(
+        const date = await this.$modalDialog(
             // () => import(`${this.datePicker}`),
             () => import('./datetime-picker-popup.vue'),
             props,

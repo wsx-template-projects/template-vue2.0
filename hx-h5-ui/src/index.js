@@ -4,6 +4,7 @@ import List from '../packages/list/index.js'
 import Tab from '../packages/tab/index.js'
 import Dialog from '../packages/dialog/index.js'
 import FieldView from '../packages/field-view/index.js'
+import ListGroup from '../packages/list-group/index.js'
 import ButtonGroup from '../packages/button-group/index.js'
 import Popup from '../packages/popup/index.js'
 import ConditionInquire from '../packages/condition-inquire/index.js'
@@ -17,6 +18,7 @@ const baseComponents = [
     Search,
     BaseForm,
     List,
+    ListGroup,
     Tab,
     NumberInput,
     ConditionInquire,

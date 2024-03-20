@@ -131,7 +131,7 @@ export default class SelectPicker extends Vue {
             value: this.value,
             options: this.myOptions,
         }
-        const { value, selectedOptions, tabIndex } = await this.$moduleLoad(
+        const { value, selectedOptions, tabIndex } = await this.$modalDialog(
             () => import('./cascader-popup.vue'),
             props,
         )

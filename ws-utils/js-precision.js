@@ -1,3 +1,8 @@
+import _ from 'lodash'
+
+// _.multiply(0.1,3) 小数乘法js精度丢失
+// console.log('mul :>> ', _.multiply(0.1, 3))
+
 /*
  * @Author: wangshengxian
  * @Date: 2020-08-13 15:33:38
@@ -7,8 +12,10 @@
  */
 // 0.1 + 0.2 = 0.30000000000000004
 // 4.44 + 2.22;
-// 8.88 + 2.22
+// 8.88 + 2.22;
 // 13.32 + 2.22;
+// 0.1 * 3;
+
 /**
  * 加法
  */
@@ -66,14 +73,22 @@ function mul(num1, num2) {
         max2 = 0
     }
     // console.log(val1, val2, max1, max2)
-    return (
-        (Number(val1.replace('.', '')) * Number(val2.replace('.', ''))) /
-        Math.pow(10, max1 + max2)
-    )
+    const max = Math.max(max1, max2)
+    // const max = Math.max(getDecimalLength(val1), getDecimalLength(val2))
+    const multiplier = Math.pow(10, max)
+    const intVal1 = Math.round(val1 * multiplier)
+    const intVal2 = Math.round(val2 * multiplier)
+    // console.log('intVal1 :>> ', intVal1)
+    // console.log('intVal2 :>> ', intVal2)
+    return _.divide(_.multiply(intVal1, intVal2), Math.pow(multiplier, 2))
+    // return (
+    //     (Number(val1.replace('.', '')) * Number(val2.replace('.', ''))) /
+    //     Math.pow(10, max1 + max2)
+    // )
 }
 
 /**
- * 除法
+ * 除法，需要验证一下num1,num2为空字符串、null、undefined
  */
 function div(num1, num2) {
     let len1, len2, val1, val2
@@ -103,7 +118,7 @@ function toFixed(arg, n) {
         return Math.round(arg)
     }
     try {
-        var d,
+        let d,
             carryD,
             i,
             ds = arg.toString().split('.'),
@@ -138,6 +153,15 @@ function sum(arr) {
         console.log('-sum-', prevVal, currVal)
         return add(prevVal, currVal)
     })
+}
+
+/**
+ * @description 获取小数位
+ */
+function getDecimalLength(num) {
+    const strNum = String(num)
+    const decimalIndex = strNum.indexOf('.')
+    return decimalIndex === -1 ? 0 : strNum.length - decimalIndex - 1
 }
 
 export default {

@@ -1,6 +1,6 @@
-# hx-field-view
+# module-title
 
-field-view组件
+模块标题组件
 
 ## 基础属性 - Attrs
 
@@ -28,15 +28,18 @@ field-view组件
 
 ### 示例
 
-```html
+```bash
 
-<hx-field-view
-    icon="icon-checkNo"
-    label="label"
-    value="value"
-    align="right"
-    :is-bottom-border="false"
-    :is-ellipsis="false"
-></hx-field-view>
+<hx-module-title
+    big-title="大标题"
+    sub-title="小标题"
+    right-text="右边文本"
+    :has-more="true"
+    @more-click="moreClick"
+></hx-module-title>
+
+moreClick() {
+    console.log('more-click :>> ')
+}
 
 ```
