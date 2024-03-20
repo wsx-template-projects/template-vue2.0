@@ -1,0 +1,10 @@
+{
+    "code": 200,
+    "message": "",
+    "errors": [],
+    "data": {
+        "appid": "signBusiness",
+        "hashdata": "S0PNWOKC8UzY1blvL3u+wtRhdUVYUk8GwsgAMEd7Zjs=",
+        "time": "20240305150854"
+    }
+}

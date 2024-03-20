@@ -1,0 +1,42 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "sourceId": "data_sourceId",
+    "no": "data_no",
+    "mcdRidParent": "data_mcdRidParent",
+    "level": 0,
+    "sourceSystem": "data_sourceSystem",
+    "mcaNameLocation": "data_mcaNameLocation",
+    "isValid": "data_isValid",
+    "subsystem": "data_subsystem",
+    "fullName": "data_fullName",
+    "sort": 0,
+    "type": "data_type",
+    "grouping": "data_grouping",
+    "vid": "data_vid",
+    "mcaNameDomination": "data_mcaNameDomination",
+    "simpleName": "data_simpleName",
+    "mcaCodeLocation": "data_mcaCodeLocation",
+    "fullAddress": "data_fullAddress",
+    "alias": "data_alias",
+    "detailAddress": "data_detailAddress",
+    "subType": "data_subType",
+    "mcaCodeDomination": "data_mcaCodeDomination",
+    "mcfRid": "data_mcfRid"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

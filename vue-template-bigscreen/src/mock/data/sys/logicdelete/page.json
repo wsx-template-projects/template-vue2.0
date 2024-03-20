@@ -1,0 +1,206 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "recordsFiltered": "0",
+    "draw": 0,
+    "data": [
+      {
+        "vid": "data_data_0_vid",
+        "tableType": "data_data_0_tableType",
+        "createTime": "2019-12-31 00:00:00",
+        "recordKey": "data_data_0_recordKey",
+        "isValid": "data_data_0_isValid",
+        "subsystem": "data_data_0_subsystem",
+        "subsystemName": "data_data_0_subsystemName",
+        "tableTypeName": "data_data_0_tableTypeName",
+        "content": "data_data_0_content",
+        "mcuRidCreate": "2010/01/00 00:00:00"
+      },
+      {
+        "vid": "data_data_1_vid",
+        "tableType": "data_data_1_tableType",
+        "createTime": "2020-01-01 00:00:01",
+        "recordKey": "data_data_1_recordKey",
+        "isValid": "data_data_1_isValid",
+        "subsystem": "data_data_1_subsystem",
+        "subsystemName": "data_data_1_subsystemName",
+        "tableTypeName": "data_data_1_tableTypeName",
+        "content": "data_data_1_content",
+        "mcuRidCreate": "2010/01/01 00:00:01"
+      },
+      {
+        "vid": "data_data_2_vid",
+        "tableType": "data_data_2_tableType",
+        "createTime": "2020-01-02 00:00:02",
+        "recordKey": "data_data_2_recordKey",
+        "isValid": "data_data_2_isValid",
+        "subsystem": "data_data_2_subsystem",
+        "subsystemName": "data_data_2_subsystemName",
+        "tableTypeName": "data_data_2_tableTypeName",
+        "content": "data_data_2_content",
+        "mcuRidCreate": "2010/01/02 00:00:02"
+      },
+      {
+        "vid": "data_data_3_vid",
+        "tableType": "data_data_3_tableType",
+        "createTime": "2020-01-03 00:00:03",
+        "recordKey": "data_data_3_recordKey",
+        "isValid": "data_data_3_isValid",
+        "subsystem": "data_data_3_subsystem",
+        "subsystemName": "data_data_3_subsystemName",
+        "tableTypeName": "data_data_3_tableTypeName",
+        "content": "data_data_3_content",
+        "mcuRidCreate": "2010/01/03 00:00:03"
+      },
+      {
+        "vid": "data_data_4_vid",
+        "tableType": "data_data_4_tableType",
+        "createTime": "2020-01-04 00:00:04",
+        "recordKey": "data_data_4_recordKey",
+        "isValid": "data_data_4_isValid",
+        "subsystem": "data_data_4_subsystem",
+        "subsystemName": "data_data_4_subsystemName",
+        "tableTypeName": "data_data_4_tableTypeName",
+        "content": "data_data_4_content",
+        "mcuRidCreate": "2010/01/04 00:00:04"
+      },
+      {
+        "vid": "data_data_5_vid",
+        "tableType": "data_data_5_tableType",
+        "createTime": "2020-01-05 00:00:05",
+        "recordKey": "data_data_5_recordKey",
+        "isValid": "data_data_5_isValid",
+        "subsystem": "data_data_5_subsystem",
+        "subsystemName": "data_data_5_subsystemName",
+        "tableTypeName": "data_data_5_tableTypeName",
+        "content": "data_data_5_content",
+        "mcuRidCreate": "2010/01/05 00:00:05"
+      },
+      {
+        "vid": "data_data_6_vid",
+        "tableType": "data_data_6_tableType",
+        "createTime": "2020-01-06 00:00:06",
+        "recordKey": "data_data_6_recordKey",
+        "isValid": "data_data_6_isValid",
+        "subsystem": "data_data_6_subsystem",
+        "subsystemName": "data_data_6_subsystemName",
+        "tableTypeName": "data_data_6_tableTypeName",
+        "content": "data_data_6_content",
+        "mcuRidCreate": "2010/01/06 00:00:06"
+      },
+      {
+        "vid": "data_data_7_vid",
+        "tableType": "data_data_7_tableType",
+        "createTime": "2020-01-07 00:00:07",
+        "recordKey": "data_data_7_recordKey",
+        "isValid": "data_data_7_isValid",
+        "subsystem": "data_data_7_subsystem",
+        "subsystemName": "data_data_7_subsystemName",
+        "tableTypeName": "data_data_7_tableTypeName",
+        "content": "data_data_7_content",
+        "mcuRidCreate": "2010/01/07 00:00:07"
+      },
+      {
+        "vid": "data_data_8_vid",
+        "tableType": "data_data_8_tableType",
+        "createTime": "2020-01-08 00:00:08",
+        "recordKey": "data_data_8_recordKey",
+        "isValid": "data_data_8_isValid",
+        "subsystem": "data_data_8_subsystem",
+        "subsystemName": "data_data_8_subsystemName",
+        "tableTypeName": "data_data_8_tableTypeName",
+        "content": "data_data_8_content",
+        "mcuRidCreate": "2010/01/08 00:00:08"
+      },
+      {
+        "vid": "data_data_9_vid",
+        "tableType": "data_data_9_tableType",
+        "createTime": "2020-01-09 00:00:09",
+        "recordKey": "data_data_9_recordKey",
+        "isValid": "data_data_9_isValid",
+        "subsystem": "data_data_9_subsystem",
+        "subsystemName": "data_data_9_subsystemName",
+        "tableTypeName": "data_data_9_tableTypeName",
+        "content": "data_data_9_content",
+        "mcuRidCreate": "2010/01/09 00:00:09"
+      },
+      {
+        "vid": "data_data_10_vid",
+        "tableType": "data_data_10_tableType",
+        "createTime": "2020-01-10 00:00:10",
+        "recordKey": "data_data_10_recordKey",
+        "isValid": "data_data_10_isValid",
+        "subsystem": "data_data_10_subsystem",
+        "subsystemName": "data_data_10_subsystemName",
+        "tableTypeName": "data_data_10_tableTypeName",
+        "content": "data_data_10_content",
+        "mcuRidCreate": "2010/01/00 00:00:00"
+      },
+      {
+        "vid": "data_data_11_vid",
+        "tableType": "data_data_11_tableType",
+        "createTime": "2020-01-11 00:00:11",
+        "recordKey": "data_data_11_recordKey",
+        "isValid": "data_data_11_isValid",
+        "subsystem": "data_data_11_subsystem",
+        "subsystemName": "data_data_11_subsystemName",
+        "tableTypeName": "data_data_11_tableTypeName",
+        "content": "data_data_11_content",
+        "mcuRidCreate": "2010/01/01 00:00:01"
+      },
+      {
+        "vid": "data_data_12_vid",
+        "tableType": "data_data_12_tableType",
+        "createTime": "2020-01-12 00:00:12",
+        "recordKey": "data_data_12_recordKey",
+        "isValid": "data_data_12_isValid",
+        "subsystem": "data_data_12_subsystem",
+        "subsystemName": "data_data_12_subsystemName",
+        "tableTypeName": "data_data_12_tableTypeName",
+        "content": "data_data_12_content",
+        "mcuRidCreate": "2010/01/02 00:00:02"
+      },
+      {
+        "vid": "data_data_13_vid",
+        "tableType": "data_data_13_tableType",
+        "createTime": "2020-01-13 00:00:13",
+        "recordKey": "data_data_13_recordKey",
+        "isValid": "data_data_13_isValid",
+        "subsystem": "data_data_13_subsystem",
+        "subsystemName": "data_data_13_subsystemName",
+        "tableTypeName": "data_data_13_tableTypeName",
+        "content": "data_data_13_content",
+        "mcuRidCreate": "2010/01/03 00:00:03"
+      },
+      {
+        "vid": "data_data_14_vid",
+        "tableType": "data_data_14_tableType",
+        "createTime": "2020-01-14 00:00:14",
+        "recordKey": "data_data_14_recordKey",
+        "isValid": "data_data_14_isValid",
+        "subsystem": "data_data_14_subsystem",
+        "subsystemName": "data_data_14_subsystemName",
+        "tableTypeName": "data_data_14_tableTypeName",
+        "content": "data_data_14_content",
+        "mcuRidCreate": "2010/01/04 00:00:04"
+      }
+    ],
+    "error": "data_error",
+    "recordsTotal": "0"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

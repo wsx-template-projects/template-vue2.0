@@ -1,0 +1,32 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "note": "data_note",
+    "notSuperShow": "data_notSuperShow",
+    "isValid": "data_isValid",
+    "typeName": "data_typeName",
+    "subsystem": "data_subsystem",
+    "updateTime": "2019-12-31 00:00:00",
+    "type": "data_type",
+    "mcr8Name": "data_mcr8Name",
+    "mcr8Rids": "data_mcr8Rids",
+    "vid": "data_vid",
+    "name": "data_name",
+    "childrenType": "data_childrenType"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

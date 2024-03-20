@@ -1,0 +1,73 @@
+<template>
+    <el-dialog
+        ref="dialog"
+        :title="myTitle"
+        :visible.sync="myVisible"
+        class="my-dialog {{ pathToName name }}"
+        :fullscreen="false"
+        :append-to-body="true"
+        :close-on-click-modal="false"
+        v-bind="$attrs"
+    >
+        <div class="{{ pathToName name }}__content">
+            内容区
+        </div>
+    </el-dialog>
+</template>
+
+<script>
+export default {
+    name: '{{ properCase name }}',
+    components: {},
+    props: {
+        // 标题
+        title: {
+            type: String,
+            default: '标题',
+        },
+        // 当前展示的数据
+        model: {
+            type: Object,
+            default() {
+                return {}
+            },
+        },
+        // 额外的参数信息
+        meta: {
+            type: Object,
+            default() {
+                return {}
+            },
+        },
+        // 是否可见
+        visible: {
+            type: Boolean,
+            default: true,
+        },
+    },
+    data() {
+        return {}
+    },
+    computed: {
+        myTitle() {
+            return this.title
+        },
+        myVisible: {
+            get() {
+                return this.visible
+            },
+            set(val) {
+                this.$emit('update:visible', val)
+            },
+        },
+    },
+    watch: {},
+    created() {},
+    mounted() {},
+    methods: {},
+}
+</script>
+
+<style>
+
+</style>

@@ -1,0 +1,58 @@
+/* eslint-disable */
+{{#if hasChildren}}
+const layout = () => import(/* webpackChunkName: "{{ properCase chunkName }}" */ './_layout');
+const component = () => import(/* webpackChunkName: "{{ properCase chunkName }}" */ './index');
+export default [{
+    path: '/{{ routePath }}',
+    name: '{{ properCase layoutName }}',
+    component: layout,
+    {{#if routePath}}
+    redirect: '/{{ routePath }}/index',
+    {{else}}
+    redirect: '/index',
+    {{/if}}
+    meta: {
+        bodyClass: '',
+        parent: '{{ parent }}',
+        rank: 1,
+        title: '{{ title }}',
+        requireAuth: {{ requireAuth }},
+        keepAlive: {{ keepAlive }},
+        aliveOnlyTo: []
+    }
+} , {
+    {{#if routePath}}
+    path: '/{{ routePath }}/index',
+    {{else}}
+    path: '/index',
+    {{/if}}
+    name: '{{ properCase name }}',
+    component: component,
+    meta: {
+        bodyClass: '',
+        parent: '{{ parent }}',
+        rank: 1,
+        title: '{{ title }}',
+        requireAuth: {{ requireAuth }},
+        keepAlive: {{ keepAlive }},
+        aliveOnlyTo: []
+    }
+}];
+{{else}}
+const component = () => import(/* webpackChunkName: "{{ properCase chunkName }}" */ './index');
+
+export default {
+    path: '/{{ routePath }}',
+    name: '{{ properCase name }}',
+    component: component,
+    meta: {
+        bodyClass: '',
+        parent: '{{ parent }}',
+        rank: 1,
+        title: '{{ title }}',
+        requireAuth: {{ requireAuth }},
+        keepAlive: {{ keepAlive }},
+        aliveOnlyTo: []
+    }
+};
+{{/if}}

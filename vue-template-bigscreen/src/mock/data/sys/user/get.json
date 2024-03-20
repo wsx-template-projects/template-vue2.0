@@ -1,0 +1,33 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "isValid": "data_isValid",
+    "mcdFullName": "data_mcdFullName",
+    "subsystem": "data_subsystem",
+    "updateTime": "2019-12-31 00:00:00",
+    "rid": "data_rid",
+    "vid": "data_vid",
+    "realName": "data_realName",
+    "lastLoginTime": "2019-12-31 00:00:00",
+    "mobilePhone": "1810000000",
+    "createTime": "2019-12-31 00:00:00",
+    "mcrVids": "data_mcrVids",
+    "mcdRid": "data_mcdRid",
+    "username": "data_username"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

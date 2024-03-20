@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "vid": "data_vid",
+    "tableType": "data_tableType",
+    "createTime": "2019-12-31 00:00:00",
+    "recordKey": "data_recordKey",
+    "isValid": "data_isValid",
+    "subsystem": "data_subsystem",
+    "subsystemName": "data_subsystemName",
+    "tableTypeName": "data_tableTypeName",
+    "content": "data_content",
+    "mcuRidCreate": "2010/01/00 00:00:00"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

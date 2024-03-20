@@ -1,0 +1,37 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "vid": "data_vid",
+    "note": "data_note",
+    "mcr8Vids": "data_mcr8Vids",
+    "name": "data_name",
+    "subsystem": "data_subsystem",
+    "mcr8VidArr": [
+      "data_mcr8VidArr_0",
+      "data_mcr8VidArr_1",
+      "data_mcr8VidArr_2"
+    ],
+    "subsystemName": "data_subsystemName",
+    "mcdvVids": "data_mcdvVids",
+    "DataVisitGroupMap": {
+      "key_0": {},
+      "key_1": {},
+      "key_2": {}
+    }
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}

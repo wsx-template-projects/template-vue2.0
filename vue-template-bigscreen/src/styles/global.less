@@ -1,0 +1,35 @@
+* {
+    font-family: Microsoft YaHei, PingFangSC-Regular, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-size: 14px;
+    line-height: 1.42857143; // 参考 Bootstrap
+    color: #333;
+    word-wrap: break-word;
+    user-select: text !important;
+}
+
+@font-face {
+    font-family: 'iconfont'; /* project id 2295884 */
+    src: url('//at.alicdn.com/t/font_2295884_5ckrr92moty.eot');
+    src: url('//at.alicdn.com/t/font_2295884_5ckrr92moty.eot?#iefix')
+            format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_2295884_5ckrr92moty.woff2') format('woff2'),
+        url('//at.alicdn.com/t/font_2295884_5ckrr92moty.woff') format('woff'),
+        url('//at.alicdn.com/t/font_2295884_5ckrr92moty.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_2295884_5ckrr92moty.svg#iconfont')
+            format('svg');
+}
+
+.sg-table-txt-cut {
+    display: -webkit-box;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.sg-table-tooltip {
+    width: 350px;
+}

@@ -1,0 +1,95 @@
+// 渐变色虚线框
+.sg-dashed-10 {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-image: -webkit-linear-gradient(
+            left,
+            #dddddd 0%,
+            #dddddd 50%,
+            transparent 0%
+        );
+        background-image: linear-gradient(
+            to right,
+            #dddddd 0%,
+            #dddddd 50%,
+            transparent 0%
+        );
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+    }
+}
+
+// 隐藏滚动条
+.sg-hide-scrollbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/** 模块标题名 */
+.sg-module-title {
+    font-size: 44px;
+    letter-spacing: 24px;
+    line-height: 44px;
+    font-weight: 600;
+}
+
+.sg-big-txt {
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: 600;
+}
+
+.sg-middle-txt {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.sg-small-txt {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.sg-font-bold {
+    font-weight: 600;
+}
+
+.sg-cursor {
+    cursor: pointer;
+}
+
+.sg-title--txt {
+    font-family: PingFangSC-Semibold;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sg-radius-2 {
+    border-radius: 2px;
+}
+.sg-radius-4 {
+    border-radius: 4px;
+}
+.sg-radius-6 {
+    border-radius: 6px;
+}
+.sg-radius-8 {
+    border-radius: 8px;
+}
+.sg-radius-12 {
+    border-radius: 12px;
+}

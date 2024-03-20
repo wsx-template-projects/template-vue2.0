@@ -1,0 +1,14 @@
+
+module.exports = {
+    mode: 'hash',
+    key: '{{ name }}',
+    whiteList: ['/login', '/404', '/403', '/500'],
+    title: '{{ title }}',
+    keywords: '',
+    description: '',
+    {{#if isHome}}
+    filename: 'index.html',
+    {{/if}}
+}
+
+

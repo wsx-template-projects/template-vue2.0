@@ -1,0 +1,253 @@
+{
+  "code": 200,
+  "message": "message",
+  "data": {
+    "note": "data_note",
+    "isValid": "data_isValid",
+    "requestMethod": "data_requestMethod",
+    "updateTime": "2019-12-31 00:00:00",
+    "type": "data_type",
+    "mcr8Rids": "data_mcr8Rids",
+    "vid": "data_vid",
+    "interfaceType": "data_interfaceType",
+    "createTime": "2019-12-31 00:00:00",
+    "children": [
+      {
+        "note": "data_children_0_note",
+        "isValid": "data_children_0_isValid",
+        "requestMethod": "data_children_0_requestMethod",
+        "updateTime": "2019-12-31 00:00:00",
+        "type": "data_children_0_type",
+        "mcr8Rids": "data_children_0_mcr8Rids",
+        "vid": "data_children_0_vid",
+        "interfaceType": "data_children_0_interfaceType",
+        "createTime": "2019-12-31 00:00:00",
+        "children": [
+          {
+            "note": "data_children_0_children_0_note",
+            "isValid": "data_children_0_children_0_isValid",
+            "requestMethod": "data_children_0_children_0_requestMethod",
+            "updateTime": "2019-12-31 00:00:00",
+            "type": "data_children_0_children_0_type",
+            "mcr8Rids": "data_children_0_children_0_mcr8Rids",
+            "vid": "data_children_0_children_0_vid",
+            "interfaceType": "data_children_0_children_0_interfaceType",
+            "createTime": "2019-12-31 00:00:00",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_0_children_0_urlRegex",
+            "name": "data_children_0_children_0_name",
+            "authLevel": "data_children_0_children_0_authLevel"
+          },
+          {
+            "note": "data_children_0_children_1_note",
+            "isValid": "data_children_0_children_1_isValid",
+            "requestMethod": "data_children_0_children_1_requestMethod",
+            "updateTime": "2020-01-01 00:00:01",
+            "type": "data_children_0_children_1_type",
+            "mcr8Rids": "data_children_0_children_1_mcr8Rids",
+            "vid": "data_children_0_children_1_vid",
+            "interfaceType": "data_children_0_children_1_interfaceType",
+            "createTime": "2020-01-01 00:00:01",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_0_children_1_urlRegex",
+            "name": "data_children_0_children_1_name",
+            "authLevel": "data_children_0_children_1_authLevel"
+          },
+          {
+            "note": "data_children_0_children_2_note",
+            "isValid": "data_children_0_children_2_isValid",
+            "requestMethod": "data_children_0_children_2_requestMethod",
+            "updateTime": "2020-01-02 00:00:02",
+            "type": "data_children_0_children_2_type",
+            "mcr8Rids": "data_children_0_children_2_mcr8Rids",
+            "vid": "data_children_0_children_2_vid",
+            "interfaceType": "data_children_0_children_2_interfaceType",
+            "createTime": "2020-01-02 00:00:02",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_0_children_2_urlRegex",
+            "name": "data_children_0_children_2_name",
+            "authLevel": "data_children_0_children_2_authLevel"
+          }
+        ],
+        "urlRegex": "data_children_0_urlRegex",
+        "name": "data_children_0_name",
+        "authLevel": "data_children_0_authLevel"
+      },
+      {
+        "note": "data_children_1_note",
+        "isValid": "data_children_1_isValid",
+        "requestMethod": "data_children_1_requestMethod",
+        "updateTime": "2020-01-01 00:00:01",
+        "type": "data_children_1_type",
+        "mcr8Rids": "data_children_1_mcr8Rids",
+        "vid": "data_children_1_vid",
+        "interfaceType": "data_children_1_interfaceType",
+        "createTime": "2020-01-01 00:00:01",
+        "children": [
+          {
+            "note": "data_children_1_children_0_note",
+            "isValid": "data_children_1_children_0_isValid",
+            "requestMethod": "data_children_1_children_0_requestMethod",
+            "updateTime": "2019-12-31 00:00:00",
+            "type": "data_children_1_children_0_type",
+            "mcr8Rids": "data_children_1_children_0_mcr8Rids",
+            "vid": "data_children_1_children_0_vid",
+            "interfaceType": "data_children_1_children_0_interfaceType",
+            "createTime": "2019-12-31 00:00:00",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_1_children_0_urlRegex",
+            "name": "data_children_1_children_0_name",
+            "authLevel": "data_children_1_children_0_authLevel"
+          },
+          {
+            "note": "data_children_1_children_1_note",
+            "isValid": "data_children_1_children_1_isValid",
+            "requestMethod": "data_children_1_children_1_requestMethod",
+            "updateTime": "2020-01-01 00:00:01",
+            "type": "data_children_1_children_1_type",
+            "mcr8Rids": "data_children_1_children_1_mcr8Rids",
+            "vid": "data_children_1_children_1_vid",
+            "interfaceType": "data_children_1_children_1_interfaceType",
+            "createTime": "2020-01-01 00:00:01",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_1_children_1_urlRegex",
+            "name": "data_children_1_children_1_name",
+            "authLevel": "data_children_1_children_1_authLevel"
+          },
+          {
+            "note": "data_children_1_children_2_note",
+            "isValid": "data_children_1_children_2_isValid",
+            "requestMethod": "data_children_1_children_2_requestMethod",
+            "updateTime": "2020-01-02 00:00:02",
+            "type": "data_children_1_children_2_type",
+            "mcr8Rids": "data_children_1_children_2_mcr8Rids",
+            "vid": "data_children_1_children_2_vid",
+            "interfaceType": "data_children_1_children_2_interfaceType",
+            "createTime": "2020-01-02 00:00:02",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_1_children_2_urlRegex",
+            "name": "data_children_1_children_2_name",
+            "authLevel": "data_children_1_children_2_authLevel"
+          }
+        ],
+        "urlRegex": "data_children_1_urlRegex",
+        "name": "data_children_1_name",
+        "authLevel": "data_children_1_authLevel"
+      },
+      {
+        "note": "data_children_2_note",
+        "isValid": "data_children_2_isValid",
+        "requestMethod": "data_children_2_requestMethod",
+        "updateTime": "2020-01-02 00:00:02",
+        "type": "data_children_2_type",
+        "mcr8Rids": "data_children_2_mcr8Rids",
+        "vid": "data_children_2_vid",
+        "interfaceType": "data_children_2_interfaceType",
+        "createTime": "2020-01-02 00:00:02",
+        "children": [
+          {
+            "note": "data_children_2_children_0_note",
+            "isValid": "data_children_2_children_0_isValid",
+            "requestMethod": "data_children_2_children_0_requestMethod",
+            "updateTime": "2019-12-31 00:00:00",
+            "type": "data_children_2_children_0_type",
+            "mcr8Rids": "data_children_2_children_0_mcr8Rids",
+            "vid": "data_children_2_children_0_vid",
+            "interfaceType": "data_children_2_children_0_interfaceType",
+            "createTime": "2019-12-31 00:00:00",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_2_children_0_urlRegex",
+            "name": "data_children_2_children_0_name",
+            "authLevel": "data_children_2_children_0_authLevel"
+          },
+          {
+            "note": "data_children_2_children_1_note",
+            "isValid": "data_children_2_children_1_isValid",
+            "requestMethod": "data_children_2_children_1_requestMethod",
+            "updateTime": "2020-01-01 00:00:01",
+            "type": "data_children_2_children_1_type",
+            "mcr8Rids": "data_children_2_children_1_mcr8Rids",
+            "vid": "data_children_2_children_1_vid",
+            "interfaceType": "data_children_2_children_1_interfaceType",
+            "createTime": "2020-01-01 00:00:01",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_2_children_1_urlRegex",
+            "name": "data_children_2_children_1_name",
+            "authLevel": "data_children_2_children_1_authLevel"
+          },
+          {
+            "note": "data_children_2_children_2_note",
+            "isValid": "data_children_2_children_2_isValid",
+            "requestMethod": "data_children_2_children_2_requestMethod",
+            "updateTime": "2020-01-02 00:00:02",
+            "type": "data_children_2_children_2_type",
+            "mcr8Rids": "data_children_2_children_2_mcr8Rids",
+            "vid": "data_children_2_children_2_vid",
+            "interfaceType": "data_children_2_children_2_interfaceType",
+            "createTime": "2020-01-02 00:00:02",
+            "children": [
+              null,
+              null,
+              null
+            ],
+            "urlRegex": "data_children_2_children_2_urlRegex",
+            "name": "data_children_2_children_2_name",
+            "authLevel": "data_children_2_children_2_authLevel"
+          }
+        ],
+        "urlRegex": "data_children_2_urlRegex",
+        "name": "data_children_2_name",
+        "authLevel": "data_children_2_authLevel"
+      }
+    ],
+    "urlRegex": "data_urlRegex",
+    "name": "data_name",
+    "authLevel": "data_authLevel"
+  },
+  "errors": [
+    {
+      "field": "errors_0_field",
+      "info": "errors_0_info"
+    },
+    {
+      "field": "errors_1_field",
+      "info": "errors_1_info"
+    },
+    {
+      "field": "errors_2_field",
+      "info": "errors_2_info"
+    }
+  ]
+}
